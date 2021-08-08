@@ -111,11 +111,11 @@ public class UnitCompMotionCharacterController2D : MonoBehaviour
             //_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg ;
             //float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
             //transform.rotation = Quaternion.Euler(0.0f, 0, rotation);
-            transform.rotation = Quaternion.Euler(inputDirection.x, inputDirection.y,0);
+            transform.rotation = Quaternion.Euler(90 * inputDirection.x, 90 * inputDirection.y,0);
         }
 
-        Vector2 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-        if (abilityCurrMoveDir == Vector2.zero) targetDirection = Vector3.zero;
+        Vector2 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector2.up;
+        if (abilityCurrMoveDir == Vector2.zero) targetDirection = Vector2.zero;
 
         // move the player
         _rigidbody2D.velocity += ((targetDirection.normalized * (_speed * Time.deltaTime) ));
