@@ -11,6 +11,7 @@ public class UnitRefs : MonoBehaviour
     // public ICharMovementWrapper _charMovement;
     //public ICharMovesets _charMovesets;
     public Animator _anim;
+    public bool hasAnim;
 
     [Header("Ability Related")]
     //public SupportCompCombatMeleeAtkHandler meleeHandler;
@@ -30,26 +31,27 @@ public class UnitRefs : MonoBehaviour
 
 
     [Header("Ability Motion")]
-    public CharacterController _characterController; // built-in character controller
-    public UnitCompMotionCharacterController _unitCharacterController;
-    public UnitCompMotionRigidBodyPush _basicRigidBodyPush;
-    public UnitCompMotionMovingPlatform _motionMovingPlatform;
+    //public CharacterController _characterController; // built-in character controller
+    public UnitCompMotionCharacterController2D _unitCharacterController;
+    //public UnitCompMotionCharacterController _unitCharacterController;
+    //public UnitCompMotionRigidBodyPush _basicRigidBodyPush;
+    //public UnitCompMotionMovingPlatform _motionMovingPlatform;
 
-    [Header("Integration: Humanoid-Final IK")]
+    //[Header("Integration: Humanoid-Final IK")]
     //public FullBodyBipedIK _fullBodyBipedIK;
     //public GrounderFBBIK _grounderFbbik;
     //public LookAtIK _lookAtIK;
 
-    [Header("Integration: SAC Movement Effects (Standard Character Assets)")]
+    //[Header("Integration: SAC Movement Effects (Standard Character Assets)")]
     //public CharCompMovementEffects _charCompMovementEffects;
 
-    [Header("Rig Transforms")]
-    public Transform rigSkeleton;
+    //[Header("Rig Transforms")]
+    //public Transform rigSkeleton;
 
-    [Header("Camera Cinemachines")]
-    public Transform cameraTarget;
-    public CinemachineVirtualCameraBase CM_StateDriveFreeLook;
-    public CinemachineVirtualCameraBase CM_LockOn;
+    //[Header("Camera Cinemachines")]
+    //public Transform cameraTarget;
+    //public CinemachineVirtualCameraBase CM_StateDriveFreeLook;
+    //public CinemachineVirtualCameraBase CM_LockOn;
 
     //[Header("HUD Lock On")]
     //public ParentConstraint HUD_LockOnChosenTargetPrnCstrain;
@@ -65,26 +67,26 @@ public class UnitRefs : MonoBehaviour
     private void Awake()
     {
         // Ref: TryGetComponent https://medium.com/chenjd-xyz/unity-tip-use-trygetcomponent-instead-of-getcomponent-to-avoid-memory-allocation-in-the-editor-fe0c3121daf6
-        TryGetComponent(out _anim);
-        TryGetComponent(out _characterController);
+        hasAnim = TryGetComponent(out _anim);
+        //TryGetComponent(out _characterController);
         TryGetComponent(out _unitCharacterController);
-        TryGetComponent(out _basicRigidBodyPush);
-        TryGetComponent(out _motionMovingPlatform);
+        //TryGetComponent(out _basicRigidBodyPush);
+        //TryGetComponent(out _motionMovingPlatform);
 
     }
     private void OnEnable()
     {
-        ResetRigRelatedRefs();
+        //ResetRigRelatedRefs();
         // Setup Rig And IK
     }
 
     public void ResetRigRelatedRefs()
     {
-        if (cameraTarget)
-        {
-            CM_StateDriveFreeLook.LookAt = cameraTarget;
-            CM_LockOn.Follow = cameraTarget;
-        }
+        //if (cameraTarget)
+        //{
+        //    CM_StateDriveFreeLook.LookAt = cameraTarget;
+        //    CM_LockOn.Follow = cameraTarget;
+        //}
         //// Parent Constraints
         ///// Disabled///Snap AISensor to rigHead for more realistic sight sensing, but could break sight while performing evade/dive roll. Disabled
         //// ConstraintCommon.ResetCSrcToSingleTargetParent(aiSensorParentConstraint, _fullBodyBipedIK.references.head);

@@ -8,14 +8,16 @@ public class UnitCompAbilityManager : MonoBehaviour
 
     public List<ISupportComp> supportComponents;
     public UnitRefs _ownerUnitRefs;
+
+    public EUnitPossesionType eUnitPossesion;
     void Awake()
     {
         unitAblComponents = new List<AbilityBaseComp>(GetComponentsInChildren<AbilityBaseComp>());
-        activeAblComponent = new List<AbilityBaseComp>(System.Array.FindAll(unitAblComponents.ToArray(), a => a.isActiveAndEnabled && a.isUsageRequirementsMet));
 
         foreach (AbilityBaseComp ablComp in unitAblComponents)
         {
             ablComp._ownerUnitRefs = this._ownerUnitRefs;
+            ablComp.eUnitPossesion = eUnitPossesion;
         }
 
         supportComponents = new List<ISupportComp>(GetComponentsInChildren<ISupportComp>());
@@ -24,13 +26,17 @@ public class UnitCompAbilityManager : MonoBehaviour
             supportComp._OwnerUnitRefs = this._ownerUnitRefs;
         }
     }
-
-    AbilityBaseComp GetActiveAbilityCompByEnum(EAbilityTechniques eAbilityTechniques)
+    private void Start()
+    {
+        activeAblComponent = new List<AbilityBaseComp>(System.Array.FindAll(unitAblComponents.ToArray(), a => a.isActiveAndEnabled && a.isUsageRequirementsMet));
+    }
+    public AbilityBaseComp GetActiveAbilityCompByEnum(EAbilityTechniques eAbilityTechniques)
     {
         foreach (AbilityBaseComp ablComp in activeAblComponent)
         {
             if(ablComp.eAbilityTechniques == eAbilityTechniques)
             {
+                print(ablComp.eAbilityTechniques);
                 return ablComp;
             }
         }

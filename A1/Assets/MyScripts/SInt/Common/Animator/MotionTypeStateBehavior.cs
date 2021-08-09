@@ -40,7 +40,7 @@ public class MotionTypeStateBehavior : StateMachineBehaviour, IStateBehavior
         {
             hasOwnerUnitRefs = animator.TryGetComponent(out _ownerUnitRefs);
             //originalGravity = _ownerUnitRefs._unitCharacterController.Gravity;
-            originalCharControlVerticalVelocity = _ownerUnitRefs._unitCharacterController._verticalVelocity;
+            //originalCharControlVerticalVelocity = _ownerUnitRefs._unitCharacterController._verticalVelocity;
         }
         if (isIsTimed == true)
         {
@@ -150,7 +150,7 @@ public class MotionTypeStateBehavior : StateMachineBehaviour, IStateBehavior
             //}
             if (isUseCharControlTempVerticalVelocityOverride)
             {
-                _ownerUnitRefs._unitCharacterController._verticalVelocity = originalCharControlVerticalVelocity;
+                //_ownerUnitRefs._unitCharacterController._verticalVelocity = originalCharControlVerticalVelocity;
             }
         }
     }
@@ -168,7 +168,7 @@ public class MotionTypeStateBehavior : StateMachineBehaviour, IStateBehavior
             //}
             if (isUseCharControlTempVerticalVelocityOverride)
             {
-                _ownerUnitRefs._unitCharacterController._verticalVelocity = tempCharControlVerticalVelocity;
+                //_ownerUnitRefs._unitCharacterController._verticalVelocity = tempCharControlVerticalVelocity;
             }
         }
         if (scriptMotionVelocity2D != Vector2.zero)

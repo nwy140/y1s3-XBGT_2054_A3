@@ -170,12 +170,15 @@ public class AbilityBaseComp : MonoBehaviour
         // Check Movement Mode
         if (movementModesRequirement.Count == 0 || movementModesRequirement.Contains(_ownerUnitRefs._unitCharacterController.movementMode)) // Correct Movement Mode
         {
-            // Check Anim Param Name
-            foreach (string animParamName in rejectedAnimBoolParamStateNames)
+            if (_ownerUnitRefs.hasAnim)
             {
-                if (_ownerUnitRefs._anim.GetBool(animParamName) == true)
+                // Check Anim Param Name
+                foreach (string animParamName in rejectedAnimBoolParamStateNames)
                 {
-                    return false;
+                    if (_ownerUnitRefs._anim.GetBool(animParamName) == true)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
@@ -330,7 +333,7 @@ public class AbilityBaseComp : MonoBehaviour
     {
         Debug.Log(gameObject.name);
 
-        if (_ownerUnitRefs._anim)
+        if (_ownerUnitRefs.hasAnim)
         {
             foreach (string animParamName in enabledAnimBoolParamStateNames)
             {
