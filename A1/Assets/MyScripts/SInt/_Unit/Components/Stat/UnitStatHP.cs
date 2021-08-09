@@ -5,20 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using TMPro;
+using UnityEngine.Events;
 
-//using TmPro;
-
-//Class
-///<summary> 
-///     This class controls the HP Stat of the Character
-///         
-///     Explanation:
-/// 		
-///     Usage:
-/// 		
-///     Integration:
-/// 
-/// </summary>
 public class UnitStatHP : MonoBehaviour, ISupportComp
 {
     public UnitRefs _OwnerUnitRefs { get => _ownerUnitRefs; set => _ownerUnitRefs = value; }
@@ -32,37 +20,64 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
     public TextMeshProUGUI StatHPText;
 
     //Invulnerable means unable to receive damage
-    private bool bIsInvulnerable;
-    private Animator animator;
-
-    public List<GameObject> objsToDisableOnDeath;
-    public List<GameObject> objsToEnableOnDeath;
+    public bool bIsInvulnerable;
 
 
-    void Start()
+    public UnityEvent OnKOEvent;
+    public UnityEvent OnKOEvent_WaitForHPSliderLerp;
+
+    void Awake()
     {
-        animator = GetComponent<Animator>();
-        // if anim still null, Get anim in children
-        if (animator == null)
-        {
-            animator = GetComponentInChildren<Animator>();
-        }
-
         curHP = maxHP;
-
+        OnKOEvent.AddListener(DisableAllOwnerScripts);
+        // Ref: https://stackoverflow.com/questions/45582261/how-to-add-unity-component-functions-in-unityevent-using-script/45583832
     }
+
+    private void Update()
+    {
+    }
+
+    //[HideInInspector]
+    public float lerpHP;
+    public float hpSliderLerpSpeed = 0.95f;
+
+
+
     void OnGUI()
     {
-        if (HPSlider)
-            HPSlider.value = curHP / maxHP;
-        if (StatHPText)
-            StatHPText.text = "HP: " + curHP + "/" + maxHP;
+        if (HPSlider != null)
+        {
+            if (maxHP != 0) // should not divide by zero
+            {
+                lerpHP = MathCommon.CalculateSliderValuePercentage(HPSlider, curHP, maxHP, hpSliderLerpSpeed * Time.deltaTime) * maxHP;
+                // 2decimal place ToString("F2") Reference: https://answers.unity.com/questions/50391/how-to-round-a-float-to-2-dp.html
+                if (StatHPText)
+                    StatHPText.SetText("HP: " + Mathf.Round(lerpHP) + " / " + (int)maxHP);
+                HPSlider.value = lerpHP / maxHP;
+            }
+            // If HP bar value == 0 i.e by 0 decimal place, then ResetToOriginal Shader Material
+            if (Mathf.Round(lerpHP) == 0)
+            {
+                AudioManager.instance.PlaySFX("KO");
+            }
+        }
     }
-
-    public bool Invulnerable
+    public void SetCurHP(float newCurrHP)  // Apply Damage method
     {
-        get { return bIsInvulnerable; }
-        set { bIsInvulnerable = value; }
+        curHP = Mathf.Clamp(newCurrHP, 0, maxHP);
+        // Modify HP Cat Data
+
+        if (isActiveAndEnabled)
+        {
+            StartCoroutine(OnDamageBlinking());
+        }
+        if (curHP <= 0)
+        {
+            //            anim.SetTrigger("death");
+            OnKO();
+            curHP = 0;
+            _ownerUnitRefs._unitCharacterController._rigidbody2D.velocity = Vector2.zero;
+        }
     }
 
 
@@ -77,7 +92,6 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
         {
             curHP += HealValue;
         }
-
         if (curHP > maxHP)
         {
             curHP = maxHP;
@@ -94,63 +108,38 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
     public void ApplyDamage(float DamageValue)
     {
         // instigator
-        if (curHP > 0 && Invulnerable == false)
+        if (curHP > 0 && isBlinking == false)
         {
             curHP -= DamageValue;
             if (gameObject.activeInHierarchy)
             {
-                StartCoroutine(OnBlinkingsprite());
+                StartCoroutine(OnDamageBlinking());
             }
         }
-
         if (curHP <= 0)
         {
             //            anim.SetTrigger("death");
-
-            OnDeath();
-
+            OnKO();
             curHP = 0;
+            _ownerUnitRefs._unitCharacterController._rigidbody2D.simulated = false;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir = Vector2.zero;
         }
-
-
     }
 
-    public void OnDeath()
+    public void OnKO()
     {
-        if (animator)
-        {
-            animator.SetBool("IsDead", true);
+        OnKOEvent.Invoke();
+    }
 
-        }
-        // default tag objects will not be shot
-        //// death code for char
-        // disable all components in char
-
-
-        //for char using NavAgent only
-        if (GetComponent<NavMeshAgent>())
-        {
-            GetComponent<NavMeshAgent>().isStopped = true;
-        }
-
-        // disable all components to prevent input or physics from occuring
-        MonoBehaviour[] components = GetComponents<MonoBehaviour>();
+    public void DisableAllOwnerScripts()
+    {
+        MonoBehaviour[] components = _ownerUnitRefs.GetComponents<MonoBehaviour>();
         foreach (MonoBehaviour comp in components)
         {
             if (comp)
             {
                 comp.enabled = false;
             }
-        }
-
-        foreach (GameObject obj in objsToDisableOnDeath)
-        {
-            obj.SetActive(false);
-        }
-
-        foreach (GameObject obj in objsToEnableOnDeath)
-        {
-            obj.SetActive(true);
         }
     }
 
@@ -189,23 +178,41 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
             && onHitBoxDmgFilterIgnoreTags.Contains(other.tag) == false
             && onHitBoxDmgFilterIgnoreObj.Contains(other) == false)
         {
-            ApplyDamage(onHitBoxDmgValue[onHitBoxDmgFilterTags.IndexOf(other.tag)]);
-            animator.SetTrigger("Trigger_Stun");
+            SetCurHP(curHP - onHitBoxDmgValue[onHitBoxDmgFilterTags.IndexOf(other.tag)]);
         }
     }
-    public bool bisinvulnerable;
-    IEnumerator OnBlinkingsprite()
+
+    public bool isBlinking;
+    public int DamageBlinkCount = 5;
+    public float DamageBlinkDelay = 0.1f;
+    // Method Reused from: https://github.com/nwy140/TheWYGameDevelopmentFramework/blob/master/WyFramework/Assets/Scripts/MyLibrary/WyFramework/Char%20Scripts/Mech%20Scripts/MechCharStatHP.cs
+    IEnumerator OnDamageBlinking()
     {
-        bisinvulnerable = true;
-        for (int i = 0; i < 5; i++)
+        isBlinking = true;
+        if (HPSlider != null)
         {
-            yield return new WaitForSeconds(0.1f);
-            _ownerUnitRefs.CosmeticObj.SetActive(false);
-            //disable sprite
-            yield return new WaitForSeconds(0.1f);
-            // enable sprite
-            _ownerUnitRefs.CosmeticObj.SetActive(true);
+            int count = 0;
+            while (Mathf.Round(lerpHP) != curHP && Mathf.Round(lerpHP) > 0)
+            {
+                yield return new WaitForSecondsRealtime(DamageBlinkDelay);
+                //disable
+                // only blink if not healing
+                if (Mathf.Round(lerpHP) > curHP && count < DamageBlinkCount)
+                    _ownerUnitRefs.CosmeticObj.SetActive(false);
+                yield return new WaitForSecondsRealtime(DamageBlinkDelay);
+                // enable sprite
+                if (_ownerUnitRefs.CosmeticObj.activeInHierarchy == false)
+                    _ownerUnitRefs.CosmeticObj.SetActive(true);
+                count++;
+            }
         }
-        bisinvulnerable = false;
+        isBlinking = false;
+        if (Mathf.Round(lerpHP) == maxHP || Mathf.Round(lerpHP) == curHP || lerpHP == 0 || isBlinking == false)
+        {
+            if (curHP <= 0)
+            {
+                OnKOEvent_WaitForHPSliderLerp.Invoke();
+            }
+        }
     }
 }

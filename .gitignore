@@ -37,3 +37,4 @@ sysinfo.txt
 *.unitypackage
 A2/Assets/_gitignored/*
 A2/Logs/*
+A1/Logs/*
