@@ -13,6 +13,9 @@ public class UnitRefs : MonoBehaviour
     public Animator _anim;
     public bool hasAnim;
 
+    [Header("Hierachy")]
+    public GameObject CosmeticObj;
+
     [Header("Ability Related")]
     //public SupportCompCombatMeleeAtkHandler meleeHandler;
     public UnitCompAbilityManager unitCompAbilityManager;

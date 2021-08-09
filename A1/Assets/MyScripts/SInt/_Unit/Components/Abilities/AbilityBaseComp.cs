@@ -331,7 +331,6 @@ public class AbilityBaseComp : MonoBehaviour
 
     public virtual void AutoSetAnimatorParams()
     {
-        Debug.Log(gameObject.name);
 
         if (_ownerUnitRefs.hasAnim)
         {

@@ -37,7 +37,7 @@ public class UnitCompMotionCharacterController2D : MonoBehaviour
     private bool _hasAnimator;
     private Animator _animator;
     private bool hasRigidbody2D;
-    private Rigidbody2D _rigidbody2D;
+    public Rigidbody2D _rigidbody2D;
 
 
     [Header("Motion Custom Variables")]

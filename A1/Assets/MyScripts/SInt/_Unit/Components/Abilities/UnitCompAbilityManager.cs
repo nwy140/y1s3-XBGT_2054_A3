@@ -36,7 +36,6 @@ public class UnitCompAbilityManager : MonoBehaviour
         {
             if(ablComp.eAbilityTechniques == eAbilityTechniques)
             {
-                print(ablComp.eAbilityTechniques);
                 return ablComp;
             }
         }
