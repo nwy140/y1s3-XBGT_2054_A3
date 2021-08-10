@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AbilityCompRegularAtkRange2D : AbilityBaseComp
@@ -13,21 +14,25 @@ public class AbilityCompRegularAtkRange2D : AbilityBaseComp
     }
     public GameObject projectilePrefab;
     public GameObject muzzleFX;
-    public Transform muzzleSocket;
+    public List<Transform> muzzleSockets;
 
     public override void OnAbilityActiveEnter()
     {
         base.OnAbilityActiveStay();
-        bool hasImpactEffectComp;
-        ImpactEffect impactEffect;
-        Instantiate(projectilePrefab, muzzleSocket.position, muzzleSocket.rotation);
-        Instantiate(muzzleFX, muzzleSocket.position, muzzleSocket.rotation);
 
-        hasImpactEffectComp = projectilePrefab.TryGetComponent(out impactEffect);
-
-        if (hasImpactEffectComp)
+        foreach (Transform muzzle in muzzleSockets)
         {
-            impactEffect.instigator = _ownerUnitRefs.gameObject;
+            bool hasImpactEffectComp;
+            ImpactEffect impactEffect;
+            Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
+            Instantiate(muzzleFX, muzzle.position, muzzle.rotation);
+            hasImpactEffectComp = projectilePrefab.TryGetComponent(out impactEffect);
+
+            if (hasImpactEffectComp)
+            {
+                impactEffect.instigator = _ownerUnitRefs.gameObject;
+            }
         }
+
     }
 }

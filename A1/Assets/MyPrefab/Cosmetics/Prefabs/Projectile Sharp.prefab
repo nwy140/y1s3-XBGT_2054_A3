@@ -151,6 +151,13 @@ MonoBehaviour:
   hit_effect: {fileID: 100002, guid: cafecd3fc3b761c45bb1553f35cf5c96, type: 3}
   instigator: {fileID: 0}
   lifespan: 5
+  isFilterTag: 0
+  onHitBoxDmgFilterTags: []
+  isFilterIgnoreInstigatorTag: 1
+  onHitBoxDmgFilterIgnoreTags:
+  - Projectile
+  onHitBoxDmgFilterIgnoreObj: []
+  onHitBoxDmgValue: 
 --- !u!96 &9600000
 TrailRenderer:
   serializedVersion: 2

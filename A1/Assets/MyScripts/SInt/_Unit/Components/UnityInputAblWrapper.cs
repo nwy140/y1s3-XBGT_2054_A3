@@ -8,6 +8,7 @@ public class UnityInputAblWrapper : MonoBehaviour
     public KeyCode key_GroundEvade1 = KeyCode.LeftControl;
     public KeyCode key_GroundEvade2 = KeyCode.C;
     public KeyCode key_RegularAtkRange2D = KeyCode.Mouse0;
+    public KeyCode key_RegularAtkAim = KeyCode.Mouse1;
 
     private void FixedUpdate()
     {
@@ -30,7 +31,8 @@ public class UnityInputAblWrapper : MonoBehaviour
         //}
         //if (_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkRange2D))
         //{
-            _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkRange2D).button = Input.GetButton("Jump") || Input.GetKey(key_RegularAtkRange2D); 
+            _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkRange2D).button =
+                        (Input.GetButton("Jump") || Input.GetKey(key_RegularAtkRange2D)) && Input.GetKey(key_RegularAtkAim) == false;
         //}
     }
 }
