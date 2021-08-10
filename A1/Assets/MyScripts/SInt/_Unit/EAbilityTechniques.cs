@@ -65,6 +65,7 @@ public enum EAbilityTechniques
 
     #region 2D
     RegularAtkRange2D,
+    RegularAtkAim,
     #endregion 2D
 
 }

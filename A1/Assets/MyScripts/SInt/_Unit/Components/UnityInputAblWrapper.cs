@@ -34,5 +34,6 @@ public class UnityInputAblWrapper : MonoBehaviour
             _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkRange2D).button =
                         (Input.GetButton("Jump") || Input.GetKey(key_RegularAtkRange2D)) && Input.GetKey(key_RegularAtkAim) == false;
         //}
+        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkAim).button = Input.GetKey(key_RegularAtkAim);
     }
 }

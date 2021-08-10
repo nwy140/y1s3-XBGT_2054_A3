@@ -156,6 +156,7 @@ MonoBehaviour:
   isFilterIgnoreInstigatorTag: 1
   onHitBoxDmgFilterIgnoreTags:
   - Projectile
+  - InvisibileWall
   onHitBoxDmgFilterIgnoreObj: []
   onHitBoxDmgValue: 
 --- !u!96 &9600000
