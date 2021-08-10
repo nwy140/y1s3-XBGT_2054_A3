@@ -5940,7 +5940,7 @@ GameObject:
   - component: {fileID: 261023309}
   m_Layer: 0
   m_Name: Background (3)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6334,7 +6334,7 @@ GameObject:
   - component: {fileID: 342457723}
   m_Layer: 0
   m_Name: Background (7)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13705,7 +13705,7 @@ GameObject:
   - component: {fileID: 762876084}
   m_Layer: 0
   m_Name: Background (6)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24645,7 +24645,7 @@ GameObject:
   - component: {fileID: 971108258}
   m_Layer: 0
   m_Name: Background (4)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25637,7 +25637,7 @@ GameObject:
   - component: {fileID: 1105807355}
   m_Layer: 0
   m_Name: Background (2)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26795,7 +26795,7 @@ GameObject:
   - component: {fileID: 1265509654}
   m_Layer: 0
   m_Name: Background (8)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27320,7 +27320,7 @@ GameObject:
   - component: {fileID: 1346430412}
   m_Layer: 0
   m_Name: Background (1)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34016,7 +34016,7 @@ GameObject:
   - component: {fileID: 1699403697}
   m_Layer: 0
   m_Name: Background (5)
-  m_TagString: Untagged
+  m_TagString: InvisibileWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
