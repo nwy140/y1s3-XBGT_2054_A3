@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5000000}
   - component: {fileID: 11400000}
   - component: {fileID: 9600000}
+  - component: {fileID: 511765416}
   m_Layer: 0
   m_Name: Projectile Sharp
   m_TagString: Projectile
@@ -148,7 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoot_effect: {fileID: 100002, guid: 565cdc2ed7b030a41accd8f00ae59a50, type: 3}
   hit_effect: {fileID: 100002, guid: cafecd3fc3b761c45bb1553f35cf5c96, type: 3}
-  firing_ship: {fileID: 0}
+  instigator: {fileID: 0}
+  lifespan: 5
 --- !u!96 &9600000
 TrailRenderer:
   serializedVersion: 2
@@ -255,5 +257,23 @@ TrailRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.1
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &511765416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9e1819064f05c46a2dbfde8fee9500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveAcelSpeed: 2000
+  maxMoveAcelSpeed: 5000
+  curAcelSpeed: 0
+  SprintAcelSpeed: 5.335
+  maxSprintAcelSpeed: 20
+  _rigidbody2D: {fileID: 0}

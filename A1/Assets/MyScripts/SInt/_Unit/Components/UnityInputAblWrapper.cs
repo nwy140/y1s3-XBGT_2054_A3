@@ -7,6 +7,7 @@ public class UnityInputAblWrapper : MonoBehaviour
     public UnitRefs _ur;
     public KeyCode key_GroundEvade1 = KeyCode.LeftControl;
     public KeyCode key_GroundEvade2 = KeyCode.C;
+    public KeyCode key_RegularAtkRange2D = KeyCode.Mouse0;
 
     private void FixedUpdate()
     {
@@ -26,6 +27,10 @@ public class UnityInputAblWrapper : MonoBehaviour
         //if (_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.GroundEvade))
         //{
             _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.GroundEvade).buttonDown = Input.GetKeyDown(key_GroundEvade1) || Input.GetKeyDown(key_GroundEvade2);
+        //}
+        //if (_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkRange2D))
+        //{
+            _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkRange2D).button = Input.GetButton("Jump") || Input.GetKey(key_RegularAtkRange2D); 
         //}
     }
 }

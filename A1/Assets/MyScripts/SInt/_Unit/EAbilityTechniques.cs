@@ -61,6 +61,12 @@ public enum EAbilityTechniques
 
     #endregion 5 : Camera
     #endregion General Abilities Set
+
+
+    #region 2D
+    RegularAtkRange2D,
+    #endregion 2D
+
 }
 
 
