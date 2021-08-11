@@ -20,9 +20,11 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
     public List<Transform> muzzleSockets;
 
     public float aimRotOffset;
-    public override void OnAbilityActiveEnter()
+
+    public override void AbilityFunctionalityPlayer()
     {
-        base.OnAbilityActiveStay();
+        base.AbilityFunctionalityPlayer();
+
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -47,17 +49,27 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
                 impactEffect.instigator = _ownerUnitRefs.gameObject;
             }
         }
-
     }
 
+    public override void OnAbilityActiveEnter()
+    {
+        base.OnAbilityActiveEnter();
+        AbilityFunctionality();
+
+    }
+    
     void OnGUI()
     {
-        cursor.SetActive(button);
-        if (button == false)
+        if (cursor)
         {
-            foreach (Transform muzzle in muzzleSockets)
+
+            cursor.SetActive(button);
+            if (button == false)
             {
-                muzzle.localRotation = Quaternion.identity;
+                foreach (Transform muzzle in muzzleSockets)
+                {
+                    muzzle.localRotation = Quaternion.identity;
+                }
             }
         }
     }
