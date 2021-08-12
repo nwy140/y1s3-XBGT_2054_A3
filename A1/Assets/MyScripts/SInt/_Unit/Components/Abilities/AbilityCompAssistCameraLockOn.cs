@@ -394,24 +394,44 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
     public List<String> ignoreTags;
     public List<GameObject> ignoreObjs;
 
-    void OnDrawGizmosSelected()
+    //void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         if (isDebugLog)
         {
             SphereCollider col;
+            CircleCollider2D col2D;
             float totalFOV = m_Angle;
             float rayRange = 0;
+
             if (TryGetComponent<SphereCollider>(out col))
             {
                 rayRange = col.radius;
+
+            }
+            else if (TryGetComponent<CircleCollider2D>(out col2D))
+            {
+                rayRange = col2D.radius;
             }
             float halfFOV = totalFOV / 2.0f;
-            Quaternion leftRayRotation = Quaternion.AngleAxis(-halfFOV, Vector3.up);
-            Quaternion rightRayRotation = Quaternion.AngleAxis(halfFOV, Vector3.up);
-            Vector3 leftRayDirection = leftRayRotation * transform.forward;
-            Vector3 rightRayDirection = rightRayRotation * transform.forward;
-            Gizmos.DrawRay(transform.position, leftRayDirection * rayRange);
-            Gizmos.DrawRay(transform.position, rightRayDirection * rayRange);
+            //Quaternion leftRayRotation = Quaternion.AngleAxis(-halfFOV,  Vector3.up);
+            //Quaternion rightRayRotation = Quaternion.AngleAxis(halfFOV,  Vector3.up);
+            //Vector3 leftRayDirection = leftRayRotation * transform.forward;
+            //Vector3 rightRayDirection = rightRayRotation * transform.forward;
+            //Gizmos.DrawRay(transform.position, leftRayDirection * rayRange);
+            //Gizmos.DrawRay(transform.position, rightRayDirection * rayRange);
+
+            var coneDirection = totalFOV;
+            //Ref: https://stackoverflow.com/questions/52130986/can-we-create-a-gizmos-like-cone-in-unity-with-script   Quaternion upRayRotation = Quaternion.AngleAxis(-halfFOV + coneDirection, Vector3.forward);
+            Quaternion upRayRotation = Quaternion.AngleAxis(-halfFOV + coneDirection, Vector3.forward);
+            Quaternion downRayRotation = Quaternion.AngleAxis(halfFOV + coneDirection, Vector3.forward);
+
+            Vector3 upRayDirection = upRayRotation * transform.right * rayRange;
+            Vector3 downRayDirection = downRayRotation * transform.right * rayRange;
+
+            Gizmos.DrawRay(transform.position, upRayDirection);
+            Gizmos.DrawRay(transform.position, downRayDirection);
+            Gizmos.DrawLine(transform.position + downRayDirection, transform.position + upRayDirection);
         }
     }
     public void SetCosmeticsVisibility(bool isCurrentlyLockedOn)
@@ -531,7 +551,7 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
 
         //++m_NumberOfTargetsWithinRange;
         m_ObjectsInCollider.Add(other.gameObject);
-        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider); ;
+        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider); 
     }
     private void OnTriggerStay(Collider other)
     {
@@ -546,7 +566,26 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (ValidateTargetDetectedTagsLayers(collision.gameObject) == false)
+        {
+            return;
+        }
 
+        //++m_NumberOfTargetsWithinRange;
+        m_ObjectsInCollider.Add(collision.gameObject);
+        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider); 
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        m_ObjectsInCollider.Remove(collision.gameObject);
+        if (m_CandidateTargets.Contains(collision.gameObject))
+        {
+            m_CandidateTargets.Remove(collision.gameObject);
+            //--m_NumberOfTargetsWithinRange;
+        }
+    }
     #region Private
 
     private void Target(GameObject possibleLockedOnTarget)

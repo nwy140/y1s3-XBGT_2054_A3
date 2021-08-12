@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - TargetOffsetPoint
-  - Ground
-  - Projectile
+  - Equipment-DamageCauser
   - AISensorIgnore
-  - InvisibileWall
+  - TargetOffsetPoint
+  - AISensorDetectPoint
   layers:
   - Default
   - TransparentFX
@@ -16,6 +15,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Character
+  - CharacterMesh
+  - Equipment [Hitbox Inflictor]
   - 
   - 
   - 
@@ -37,11 +39,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - StaticWorldProp
+  - DynamicWorldProp
   m_SortingLayers:
   - name: Default
     uniqueID: 0
