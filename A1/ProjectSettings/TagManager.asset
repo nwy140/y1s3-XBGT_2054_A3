@@ -8,6 +8,9 @@ TagManager:
   - AISensorIgnore
   - TargetOffsetPoint
   - AISensorDetectPoint
+  - InvisibileWall
+  - Projectile
+  - NPC
   layers:
   - Default
   - TransparentFX

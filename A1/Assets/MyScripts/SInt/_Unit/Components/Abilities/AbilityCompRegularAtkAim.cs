@@ -19,26 +19,37 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
     public GameObject muzzleFX;
     public List<Transform> muzzleSockets;
 
-    public float aimRotOffset;
+    public float aimRotOffset = -90;
 
-    public override void AbilityFunctionalityPlayer()
+    public Vector2 targetPos;
+
+
+    public override void AbilityFunctionality()
     {
-        base.AbilityFunctionalityPlayer();
+        base.AbilityFunctionality();
 
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3000))
+        if (eUnitPossesion == EUnitPossesionType.player)
         {
-            cursor.transform.position = hit.point;
-            Debug.Log(hit.point);
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 3000))
+            {
+                cursor.transform.position = hit.point;
+                //Debug.Log(hit.point);
+                targetPos = hit.point;
+            }
+        }
+        else if (eUnitPossesion == EUnitPossesionType.ai)
+        {
+            targetPos = GameObject.FindGameObjectWithTag("Player").transform.position;
         }
 
         foreach (Transform muzzle in muzzleSockets)
         {
             bool hasImpactEffectComp;
             ImpactEffect impactEffect;
-            var rot = Quaternion.Euler((Vector2Common.GetRotBetween2Pos(cursor.transform.position, muzzle.position) + aimRotOffset) * Vector3.forward);
+            var rot = Quaternion.Euler((Vector2Common.GetRotBetween2Pos(targetPos, muzzle.position) + aimRotOffset) * Vector3.forward);
             muzzle.rotation = rot;
             Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
             Instantiate(muzzleFX, muzzle.position, muzzle.rotation);

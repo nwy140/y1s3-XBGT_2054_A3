@@ -17,15 +17,16 @@ public class PatrolState : StateMachineBehaviour
             _ur = getOwnerUnitRefComp._OwnerUnitRefs;
         }
 
-        targetTime = timerInSeconds;
     }
-    public float timerInSeconds = 3f;
+    public float timerInSeconds = 5f;
     public float targetTime;
 
     public float randomMoveRadius = 5f;
     public Vector2 randomSelectedPosInCircle;
-    public float targetAngle;
+    public float targetAngle = 2f;
     public Vector3 vectorInput = Vector2.up;
+    public float angle;
+
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -33,24 +34,33 @@ public class PatrolState : StateMachineBehaviour
         targetTime -= Time.deltaTime;
         if (targetTime <= 0)
         {
-            randomSelectedPosInCircle = Random.insideUnitCircle * randomMoveRadius;
+            randomSelectedPosInCircle = Vector2.one * _ur.transform.position + Random.insideUnitCircle * randomMoveRadius;
 
             targetTime = timerInSeconds;
+            Vector2 dir = (Vector2.one * _ur.transform.position - randomSelectedPosInCircle).normalized;
+            Debug.DrawLine(randomSelectedPosInCircle, randomSelectedPosInCircle + dir * 10, Color.red, Mathf.Infinity);
+            vectorInput = dir;
         }
-
-        targetAngle = Vector2Common.GetRotBetween2Pos(_ur.transform.position, randomSelectedPosInCircle);
-        if (targetAngle >= 3f)
+        angle = Vector2.Angle(_ur.transform.up, randomSelectedPosInCircle - _ur.transform.position * Vector2.one);
+        if (angle < targetAngle)
         {
-            vectorInput.x = targetAngle / (360f*2);
-        }
-        else
-        {
-            vectorInput.x = 0;
+            vectorInput = Vector2.zero;
+            angle = 0;
         }
         _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveHorizontal).Axis = vectorInput.x;
         _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveHorizontal).buttonDown = true;
-        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical).Axis = 1;
+        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical).Axis = 1.5f;
         _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical).buttonDown = true;
+
+        var lockOnSightPerceptionAblComp = (AbilityCompAssistCameraLockOn)(_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.LockOn));
+        foreach (var obj in lockOnSightPerceptionAblComp.m_CandidateTargets)
+        {
+            if(obj.tag == "Player")
+            {
+                _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkAim).buttonDown = true;
+            }
+        }
+        
 
     }
 
