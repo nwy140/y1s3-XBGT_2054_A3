@@ -63,6 +63,10 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
         LockOnTargetIndicatorParentConstraint.constraintActive = true;
         TargetInFrontIndicatorParentConstraint.constraintActive = true;
     }
+    private void Start()
+    {
+    }
+
     public override void OnInit()
     {
         if (eUnitPossesion == EUnitPossesionType.ai)
@@ -529,14 +533,17 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
         }
         if (ignoreTags.Contains(other.tag) /*|| ignoreLayers == (ignoreLayers | (1 << other.layer))*/)
         {
+            print(1);
             return false;
         }
         if (ignoreObjs.Contains(other))
         {
+            print(2);
             return false;
         }
         if (allowedLayers != (allowedLayers | (1 << other.layer)))
         {
+            print(3 + other.layer.ToString());
             return false;
         }
         return true; // target accepted
@@ -568,8 +575,10 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+            Debug.Log(ValidateTargetDetectedTagsLayers(collision.gameObject));
         if (ValidateTargetDetectedTagsLayers(collision.gameObject) == false)
         {
+
             return;
         }
 

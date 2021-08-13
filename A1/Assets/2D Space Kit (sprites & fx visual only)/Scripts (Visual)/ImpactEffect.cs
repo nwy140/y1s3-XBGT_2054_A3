@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class ImpactEffect : MonoBehaviour
 {
@@ -18,11 +19,12 @@ public class ImpactEffect : MonoBehaviour
     void Start()
     {
         GameObject obj = Instantiate(shoot_effect, transform.position - new Vector3(0, 0, 5), Quaternion.identity); //Spawn muzzle flash
+
         obj.transform.parent = instigator.transform;
         //Destroy(gameObject, lifespan); //Bullet will despawn after 5 seconds
-        if (isFilterIgnoreInstigatorTag)
+        if (isIgnoreInstigatorTag && instigator)
         {
-            onHitBoxDmgFilterIgnoreTags.Add(instigator.tag);
+            ignoreTags.Add(instigator.tag);
         }
     }
 
@@ -34,18 +36,6 @@ public class ImpactEffect : MonoBehaviour
 
 
 
-    #region SInt mods
-
-    [Header("Physics Filtering")]
-    public bool isFilterTag;
-    public List<string> onHitBoxDmgFilterTags;
-    public bool isFilterIgnoreInstigatorTag = true;
-    public List<string> onHitBoxDmgFilterIgnoreTags;
-    public List<GameObject> onHitBoxDmgFilterIgnoreObj;
-
-    public List<int> onHitBoxDmgValue;
-
-    #endregion
 
     private void OnCollisionEnter(Collision other)
     {
@@ -65,20 +55,51 @@ public class ImpactEffect : MonoBehaviour
     {
         OnHitBoxDMG(collision.gameObject);
     }
-    void OnHitBoxDMG(GameObject other)
+    #region Hitbox Filtering
+    public LayerMask allowedLayers; // layers that could be detected
+    //public LayerMask occlusionLayers; // layers that targeting system block Linecast
+
+    public bool isUseAllowedOnlyTags;
+    public bool isIgnoreInstigatorTag = true;
+    public List<string> allowedOnlyTags;
+    public List<string> ignoreTags;
+    public List<GameObject> ignoreObjs;
+    public bool ValidateTargetDetectedTagsLayers(GameObject other)
     {
-        Debug.Log("HitBox Detected: " + other.name);
-        if (other != instigator)
+        // Evaluate Tags and Layers
+        if (isUseAllowedOnlyTags)
         {
-            if ((onHitBoxDmgFilterTags.Contains(other.tag) == false && isFilterTag == false)
-                && onHitBoxDmgFilterIgnoreTags.Contains(other.tag) == false
-                && onHitBoxDmgFilterIgnoreObj.Contains(other) == false)
+            if (allowedOnlyTags.Contains(other.tag) == false)
             {
-                Instantiate(hit_effect, transform.position, Quaternion.identity);
-                gameObject.SetActive(false);
-                Destroy(gameObject, 0.1f);
+                return false; // target rejected
             }
         }
+        if (ignoreTags.Contains(other.tag) /*|| ignoreLayers == (ignoreLayers | (1 << other.layer))*/)
+        {
+            return false;
+        }
+        if (ignoreObjs.Contains(other))
+        {
+            return false;
+        }
+        if (allowedLayers != (allowedLayers | (1 << other.layer)))
+        {
+            return false;
+        }
+        return true; // target accepted
     }
+    #endregion Hitbox Filtering
+
+    void OnHitBoxDMG(GameObject other)
+    {
+        //Debug.Log("HitBox Detected: " + other.name);
+        if (ValidateTargetDetectedTagsLayers(other.gameObject) == true)
+        {
+            Instantiate(hit_effect, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+            Destroy(gameObject, 0.1f);
+        }
+    }
+
 
 }

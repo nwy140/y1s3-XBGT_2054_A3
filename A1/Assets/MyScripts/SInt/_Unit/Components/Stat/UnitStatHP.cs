@@ -33,10 +33,7 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
         // Ref: https://stackoverflow.com/questions/45582261/how-to-add-unity-component-functions-in-unityevent-using-script/45583832
     }
 
-    private void Update()
-    {
-    }
-
+ 
     //[HideInInspector]
     public float lerpHP;
     public float hpSliderLerpSpeed = 0.95f;
@@ -173,7 +170,7 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
     }
     void OnHitBoxDMG(GameObject other)
     {
-        Debug.Log("HitBox Detected: " + other.name);
+        //Debug.Log("HitBox Detected: " + other.name);
         if (onHitBoxDmgFilterTags.Contains(other.tag) == true
             && onHitBoxDmgFilterIgnoreTags.Contains(other.tag) == false
             && onHitBoxDmgFilterIgnoreObj.Contains(other) == false)

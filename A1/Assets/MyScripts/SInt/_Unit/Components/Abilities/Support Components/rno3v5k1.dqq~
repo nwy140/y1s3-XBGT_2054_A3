@@ -1,0 +1,7 @@
+
+
+public class SupportCompGetOwnerUnitRef : ISupportComp
+{
+    public UnitRefs _OwnerUnitRefs { get => _ownerUnitRefs; set => _ownerUnitRefs = value; }
+    public UnitRefs _ownerUnitRefs;
+}

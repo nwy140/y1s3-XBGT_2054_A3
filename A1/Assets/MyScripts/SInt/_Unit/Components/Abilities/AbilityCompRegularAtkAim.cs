@@ -38,7 +38,7 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
         {
             bool hasImpactEffectComp;
             ImpactEffect impactEffect;
-            var rot = Quaternion.Euler((GetRotBetween2Pos(cursor.transform.position, muzzle.position) + aimRotOffset) * Vector3.forward);
+            var rot = Quaternion.Euler((Vector2Common.GetRotBetween2Pos(cursor.transform.position, muzzle.position) + aimRotOffset) * Vector3.forward);
             muzzle.rotation = rot;
             Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
             Instantiate(muzzleFX, muzzle.position, muzzle.rotation);
@@ -74,10 +74,5 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
         }
     }
 
-    float GetRotBetween2Pos(Vector3 posA, Vector3 posB)
-    {
-        Vector3 dir = posA - posB;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        return angle;
-    }
+
 }
