@@ -12898,7 +12898,7 @@ MonoBehaviour:
 
     RightClick - Aim & Shoot
 
-    ESC/P - Pause'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15267,7 +15267,7 @@ PrefabInstance:
       objectReference: {fileID: 164810330}
     - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: onHitBoxDmgValue.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: onHitBoxDmgValue.Array.data[2]
@@ -15275,7 +15275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: onHitBoxDmgFilterTags.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: onHitBoxDmgFilterTags.Array.data[2]

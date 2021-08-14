@@ -16407,9 +16407,10 @@ MonoBehaviour:
   onHitBoxDmgFilterTags:
   - ProjectileAI
   - Bomb
+  - Potion
   onHitBoxDmgFilterIgnoreTags: []
   onHitBoxDmgFilterIgnoreObj: []
-  onHitBoxDmgValue: 0a000000f4010000
+  onHitBoxDmgValue: 0a000000f4010000d4feffff
   isBlinking: 0
   DamageBlinkCount: 5
   DamageBlinkDelay: 0.1
