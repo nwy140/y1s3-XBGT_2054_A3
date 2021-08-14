@@ -840,6 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136693510}
   - component: {fileID: 136693509}
+  - component: {fileID: 136693511}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -875,6 +876,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136693511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136693508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5a6719092afb04ab30e621ce08cde7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMName: region_overworld_AncientStage01
 --- !u!1 &151389860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1306,14 @@ PrefabInstance:
     - target: {fileID: 6528476226835199425, guid: d2a603011b125164c94bb010facba1bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6528476226835199427, guid: d2a603011b125164c94bb010facba1bc, type: 3}
+      propertyPath: defaultBGMMasterVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6528476226835199427, guid: d2a603011b125164c94bb010facba1bc, type: 3}
+      propertyPath: defaultSFXMasterVolume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a603011b125164c94bb010facba1bc, type: 3}
@@ -13648,6 +13670,22 @@ PrefabInstance:
       propertyPath: StatHPText
       value: 
       objectReference: {fileID: 164810330}
+    - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: onHitBoxDmgValue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: onHitBoxDmgValue.Array.data[2]
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: onHitBoxDmgFilterTags.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: onHitBoxDmgFilterTags.Array.data[2]
+      value: Potion
+      objectReference: {fileID: 0}
     - target: {fileID: 2982863957709051283, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: m_Layer
       value: 6

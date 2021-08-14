@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 9600000}
   - component: {fileID: 511765416}
   - component: {fileID: 2680878826160206556}
+  - component: {fileID: 5272757995888473941}
   m_Layer: 0
   m_Name: Projectile Sharp - P1
   m_TagString: Projectile
@@ -162,6 +163,7 @@ MonoBehaviour:
   - Projectile
   - InvisibileWall
   - ProjectileAI
+  - Potion
   ignoreObjs: []
 --- !u!96 &9600000
 TrailRenderer:
@@ -327,3 +329,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5272757995888473941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40309ab6fb09a40478d8eebc359caf6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFXName: Projectile

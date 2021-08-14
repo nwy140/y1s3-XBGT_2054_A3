@@ -13,6 +13,101 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimRotOffset: -90
+--- !u!114 &5498818819706947149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190299648692751932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fe144d9307f784594d7e94020fa7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToCall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8919471156671412193}
+        m_TargetAssemblyTypeName: SingleTonOnClickHelper, Assembly-CSharp
+        m_MethodName: AudioManPlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: KO
+          m_BoolArgument: 0
+        m_CallState: 2
+  isPlayOnEnable: 0
+  isPlayOnStart: 0
+  isPlayOnAwake: 0
+  isPlayOnUpdate: 0
+  isPlayOnFixedUpdate: 0
+  isPlayOnLateUpdate: 0
+  isPlayOnGUI: 0
+  isPlayOnDisable: 1
+  isPlayOnDestroy: 0
+  isPlayOnApplicationPause: 0
+  isPlayOnTransformChildrenChanged: 0
+  isPlayOnTransformParentChanged: 0
+  isPlayOnBeforeTransformParentChanged: 0
+  isPlayOnCollisionEnter: 0
+  isPlayOnCollisionExit: 0
+  isPlayOnCollisionStay: 0
+  isPlayOnTriggerEnter: 0
+  isPlayOnTriggerExit: 0
+  isPlayOnTriggerStay: 0
+  isPlayOnCollisionEnter2D: 0
+  isPlayOnCollisionExit2D: 0
+  isPlayOnCollisionStay2D: 0
+  isPlayOnTriggerEnter2D: 0
+  isPlayOnTriggerExit2D: 0
+  isPlayOnTriggerStay2D: 0
+--- !u!1 &529774024672567533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7483622365369400045}
+  - component: {fileID: 8919471156671412193}
+  m_Layer: 0
+  m_Name: SingleTonOnClickHelper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7483622365369400045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529774024672567533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.77049965, y: -0.908232, z: 0}
+  m_LocalScale: {x: 0.3203075, y: 0.3203075, z: 0.3203075}
+  m_Children: []
+  m_Father: {fileID: 190299648692392476}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8919471156671412193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529774024672567533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60d1a2aba1e63f488d6744eb2d326b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &190299648692783260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: b467076a98660c440b7628854461517a, type: 3}
       propertyPath: ignoreTags.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: b467076a98660c440b7628854461517a, type: 3}
       propertyPath: ignoreTags.Array.data[0]
@@ -107,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: b467076a98660c440b7628854461517a, type: 3}
       propertyPath: ignoreTags.Array.data[1]
       value: ProjectileAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b467076a98660c440b7628854461517a, type: 3}
+      propertyPath: ignoreTags.Array.data[2]
+      value: Potion
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: b467076a98660c440b7628854461517a, type: 3}
       propertyPath: m_Sprite
@@ -133,5 +232,10 @@ PrefabInstance:
 --- !u!1 &190299648692751932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b467076a98660c440b7628854461517a, type: 3}
+  m_PrefabInstance: {fileID: 190299648692783260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &190299648692392476 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: b467076a98660c440b7628854461517a, type: 3}
   m_PrefabInstance: {fileID: 190299648692783260}
   m_PrefabAsset: {fileID: 0}

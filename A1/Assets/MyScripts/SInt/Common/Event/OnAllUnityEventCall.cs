@@ -147,7 +147,7 @@ public class OnAllUnityEventCall : MonoBehaviour
     }
     #endregion Unity Transform Change Events
 
-    /*
+    
     #region Unity Application Events 
     private void OnApplicationPause(bool pause)
     {
@@ -223,7 +223,7 @@ public class OnAllUnityEventCall : MonoBehaviour
             PlayEventToCall();
     }
     #endregion Unity 3D Collision Events
-     */
+     
 
 }
 

@@ -16307,8 +16307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ownerUnitRefs: {fileID: 0}
-  maxHP: 500
-  curHP: 500
+  maxHP: 1000
+  curHP: 101
   HPSlider: {fileID: 0}
   StatHPText: {fileID: 0}
   bIsInvulnerable: 0

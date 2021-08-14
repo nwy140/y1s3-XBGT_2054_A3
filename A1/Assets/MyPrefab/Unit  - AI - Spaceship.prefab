@@ -600,6 +600,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8790944188158562759, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790944188158562759, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9201064
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790944188158562759, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2982863957489458696, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
     - {fileID: 2982863957489458697, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
