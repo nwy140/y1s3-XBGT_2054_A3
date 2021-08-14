@@ -126,6 +126,7 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
     public void OnKO()
     {
         OnKOEvent.Invoke();
+        Destroy(_ownerUnitRefs.gameObject);
     }
 
     public void DisableAllOwnerScripts()
@@ -180,6 +181,7 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
         if (other.tag == "Potion")
         {
             AudioManager.instance.PlaySFX("heal");
+            ScoreManager.instance.IncrementScore(200f);
             Destroy(other);
         }
     }

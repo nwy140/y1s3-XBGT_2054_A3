@@ -737,7 +737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958277487872, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: activeDuration
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958277487872, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: projectilePrefab

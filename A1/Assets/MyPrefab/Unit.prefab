@@ -16307,8 +16307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ownerUnitRefs: {fileID: 0}
-  maxHP: 1000
-  curHP: 101
+  maxHP: 1400
+  curHP: 1400
   HPSlider: {fileID: 0}
   StatHPText: {fileID: 0}
   bIsInvulnerable: 0
@@ -16409,7 +16409,7 @@ MonoBehaviour:
   - Bomb
   onHitBoxDmgFilterIgnoreTags: []
   onHitBoxDmgFilterIgnoreObj: []
-  onHitBoxDmgValue: 0a00000032000000
+  onHitBoxDmgValue: 0a000000f4010000
   isBlinking: 0
   DamageBlinkCount: 5
   DamageBlinkDelay: 0.1

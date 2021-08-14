@@ -16,9 +16,13 @@ public class SuicideBomber : MonoBehaviour
     }
     void Update()
     {
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+
         var p1 = GameObject.FindGameObjectWithTag("Player").transform;
         var rot = Quaternion.Euler((Vector2Common.GetRotBetween2Pos(p1.position, transform.position) + aimRotOffset) * Vector3.forward);
         transform.rotation = rot;
+        }
     }
 
 }

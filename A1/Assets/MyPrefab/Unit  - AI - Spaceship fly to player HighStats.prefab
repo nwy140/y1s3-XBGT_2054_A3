@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2142442524297456645
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 749215159, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_Radius
+      value: 17.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116910913159374049, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116910913159374049, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6425429
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116910913159374049, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856933970348070, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: activeDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.642362
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.354834
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981546, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618856934591981550, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_Name
+      value: Unit  - AI - Spaceship fly to player HighStats
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800569089465410351, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100272538210049440, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: MoveAcelSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100272538210049440, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}
+      propertyPath: maxMoveAcelSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3483d8c44d2afc14d982c5d637aae673, type: 3}

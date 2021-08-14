@@ -17,4 +17,8 @@ public class ScoreSingletonUnityEventWrapper : MonoBehaviour
     {
         ScoreManager.instance.DecrementScore(newScore);
     }
+    public void DestroyObj(GameObject obj)
+    {
+        Destroy(obj, 3f);
+    }
 }
