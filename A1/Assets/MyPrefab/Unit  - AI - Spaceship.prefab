@@ -397,6 +397,10 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957428526593, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: activeDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863957428526593, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 100000, guid: b467076a98660c440b7628854461517a, type: 3}
@@ -466,11 +470,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: curHP
-      value: 150
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: maxHP
-      value: 150
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957709051281, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: HPSlider
@@ -525,6 +529,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958277487872, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: activeDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863958277487872, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 100000, guid: b467076a98660c440b7628854461517a, type: 3}
@@ -534,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958729462472, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: m_Name
-      value: Unit  - AI
+      value: Unit  - AI - Spaceship
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958729462472, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: m_TagString

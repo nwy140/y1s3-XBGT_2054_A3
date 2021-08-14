@@ -13,8 +13,9 @@ public class ParallaxLayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		wantedPosition = Camera.main.transform.position * movement_resistance;
-			wantedPosition.z = transform.position.z;
+        //wantedPosition = Camera.main.transform.position * movement_resistance;
+        wantedPosition = GameObject.FindGameObjectWithTag("Player").transform.position * movement_resistance;
+        wantedPosition.z = transform.position.z;
 			transform.position = wantedPosition;
 			
 	}

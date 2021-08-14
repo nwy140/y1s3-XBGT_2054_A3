@@ -361,6 +361,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6100272538210049440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618856934591981550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9e1819064f05c46a2dbfde8fee9500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveAcelSpeed: 20
+  maxMoveAcelSpeed: 200
+  curAcelSpeed: 0
+  SprintAcelSpeed: 5.335
+  maxSprintAcelSpeed: 20
+  _rigidbody2D: {fileID: 0}
+--- !u!114 &8989433875900282344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618856934591981550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2014b7b1815da4d9d8ec13d2ade432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aimRotOffset: -90
 --- !u!58 &749215159
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -395,6 +426,10 @@ PrefabInstance:
     - target: {fileID: 2982863957134553849, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: m_TagString
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863957428526593, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: activeDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2982863957428526593, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: projectilePrefab
@@ -525,6 +560,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958277487872, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: activeDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863958277487872, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 100000, guid: b467076a98660c440b7628854461517a, type: 3}
@@ -534,11 +573,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958729462472, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: m_Name
-      value: Unit  - AI
+      value: Unit  - AI - Spaceship fly to player
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958729462472, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: m_TagString
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982863958729462473, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2982863958729462476, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
       propertyPath: m_RootOrder
@@ -592,16 +635,25 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8790944188158562759, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a39f5d360eb38284fb54a62672b5ec9f, type: 3}
     m_RemovedComponents:
     - {fileID: 2982863957489458696, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
     - {fileID: 2982863957489458697, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+--- !u!1 &5618856934591981550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2982863958729462472, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
+  m_PrefabInstance: {fileID: 7250639732726232358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5618856934591981556 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2982863958729462482, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
   m_PrefabInstance: {fileID: 7250639732726232358}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5618856934591981550}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2213ebd7e588c864c959938a4b90bfab, type: 3}

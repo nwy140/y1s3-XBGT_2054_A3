@@ -20,7 +20,10 @@ public class ImpactEffect : MonoBehaviour
     {
         GameObject obj = Instantiate(shoot_effect, transform.position - new Vector3(0, 0, 5), Quaternion.identity); //Spawn muzzle flash
 
-        obj.transform.parent = instigator.transform;
+        if (instigator)
+        {
+            obj.transform.parent = instigator.transform;
+        }
         //Destroy(gameObject, lifespan); //Bullet will despawn after 5 seconds
         if (isIgnoreInstigatorTag && instigator)
         {

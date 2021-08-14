@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 9600000}
   - component: {fileID: 511765416}
   m_Layer: 0
-  m_Name: Projectile Sharp
-  m_TagString: Projectile
+  m_Name: Projectile Sharp -AI
+  m_TagString: ProjectileAI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.695, y: 4.299, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.122, y: 3.122, z: 3.122}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,9 +76,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 31d8a46be10bcd3409183a6525fc1635, type: 3}
-  m_Color: {r: 1, g: 0.66176474, b: 0.66176474, a: 1}
+  m_Color: {r: 0.10578859, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -160,6 +160,7 @@ MonoBehaviour:
   ignoreTags:
   - Projectile
   - InvisibileWall
+  - ProjectileAI
   ignoreObjs: []
 --- !u!96 &9600000
 TrailRenderer:
@@ -281,8 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9e1819064f05c46a2dbfde8fee9500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveAcelSpeed: 2000
-  maxMoveAcelSpeed: 5000
+  MoveAcelSpeed: 300
+  maxMoveAcelSpeed: 2000
   curAcelSpeed: 0
   SprintAcelSpeed: 5.335
   maxSprintAcelSpeed: 20

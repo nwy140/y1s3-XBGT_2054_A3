@@ -6,11 +6,21 @@ using UnityEngine.UI;
 
 public class OnEnableEventCallTimer : MonoBehaviour
 {
+    [Header("Default TimerInSeconds - if isUseRandomRangeTimerInSeconds is false")]
     public float timerInSeconds = 3f;
+    public bool isUseIntervalTimer; //random
+
     public bool isAllowDisable = false;
     public bool isCountUpTimer = false;
     public bool isTimerHasLimit = true;
     public Text timerText;
+
+    public bool isLoopTimer;
+
+    public bool isUseRandomRangeTimerInSeconds;
+    [Header("Random Range MinMax TimerInSeconds - if isUseRandomRangeTimerInSeconds is true")]
+    public float minTimerInSeconds;
+    public float maxTimerInSeconds;
 
     [Header("For Debug/Inspector View Only")]
     public float targetTime;
@@ -22,7 +32,14 @@ public class OnEnableEventCallTimer : MonoBehaviour
 
     public void ResetTimer()
     {
-        targetTime = timerInSeconds;
+        if (isUseRandomRangeTimerInSeconds == false)
+        {
+            targetTime = timerInSeconds;
+        }
+        else
+        {
+            targetTime = Random.Range(minTimerInSeconds,maxTimerInSeconds);
+        }
         if (timerText != null)
         {
             timerText.text = (targetTime).ToString("F0");
@@ -77,6 +94,11 @@ public class OnEnableEventCallTimer : MonoBehaviour
         }
 
         PlayEventToCall();
+
+        if (isLoopTimer)
+        {
+            ResetTimer();
+        }
     }
 
     public UnityEvent eventToCall;

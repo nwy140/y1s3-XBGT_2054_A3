@@ -11,6 +11,8 @@ TagManager:
   - InvisibileWall
   - Projectile
   - NPC
+  - ProjectileAI
+  - Bomb
   layers:
   - Default
   - TransparentFX
