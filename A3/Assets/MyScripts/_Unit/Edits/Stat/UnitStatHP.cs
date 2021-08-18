@@ -119,7 +119,7 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
             OnKO();
             curHP = 0;
             _ownerUnitRefs._unitCharacterController._rigidbody2D.simulated = false;
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir = Vector2.zero;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle = Vector2.zero;
         }
     }
 

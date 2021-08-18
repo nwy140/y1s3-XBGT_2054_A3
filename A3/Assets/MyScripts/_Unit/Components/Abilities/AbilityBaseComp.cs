@@ -94,7 +94,14 @@ public class AbilityBaseComp : MonoBehaviour
         if (title == "")
         {
             // Use Enum Name as title if not set in inspector
-            title = eAbilityTechniques.ToString();
+            if (eAbilityTechniques != EAbilityTechniques.Empty)
+            {
+                title = eAbilityTechniques.ToString();
+            }
+        }
+        else
+        {
+            eAbilityTechniques = (EAbilityTechniques)System.Enum.Parse(typeof(EAbilityTechniques), title);
         }
     }
 

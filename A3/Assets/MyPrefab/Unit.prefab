@@ -72,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2679571338785332851, guid: 9fe856f88d5228a4abc7bb4608aa7db2, type: 3}
+  m_Sprite: {fileID: -2679571338785332851, guid: 9fe856f88d5228a4abc7bb4608aa7db2,
+    type: 3}
   m_Color: {r: 1, g: 0.5424528, b: 0.5424528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,6 +84,212 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &499301177827073332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7345522147232434794}
+  - component: {fileID: 3213003183602486756}
+  m_Layer: 0
+  m_Name: "\xABMoveHorizontal2D\xBB"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7345522147232434794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499301177827073332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2982863957094501583}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3213003183602486756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499301177827073332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea20defafeec37f43ad8f079d221233f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eAbilityTechniques: 0
+  AbilityAtk: 0
+  ComboMultiplier: 0
+  usageState: 0
+  eUnitPossesion: 0
+  isUsageRequirementsMet: 1
+  isSumOfAllRequirementsMet: 0
+  movementModesRequirement: 
+  rejectedAnimBoolParamStateNames: []
+  enabledAnimBoolParamStateNames: []
+  disabledAnimBoolParamStateNames: []
+  triggeredAnimTriggerParamStateNames: []
+  cooldownDuration: 0
+  curCooldownTimeElapsed: 0
+  activeDuration: 0
+  curActiveTimeElapsed: 0
+  Cost: 0
+  hasUseQuantityLimit: 0
+  useQuantityLimitCount: 0
+  icon: {fileID: 0}
+  cooldownProgressImg: {fileID: 0}
+  title: 
+  desc: 
+  devComment: 
+  devNotes: 
+  isDebugLog: 0
+  _ownerUnitRefs: {fileID: 0}
+  buttonDown: 0
+  button: 0
+  buttonUp: 0
+  Axis: 0
+  willActivateAbility_CurFrame: 0
+  willActivateAbility_OnButtonDown: 0
+  willActivateAbility_OnButton: 0
+  willActivateAbility_OnButtonUp: 0
+  willActivateAbility_OnAxisNotZero: 0
+  willActivateAbility_OnUpdate: 1
+  willExitAbility_OnButtonUp: 0
+  willExitAbility_OnAxisZero: 0
+  OnAbilityActiveEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityActiveStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityActiveExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityCooldownEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityCooldownStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityCooldownExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUsageRequirementsNotMetEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &2161968712753847334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3003606026909670434}
+  - component: {fileID: 3307464153937649464}
+  m_Layer: 0
+  m_Name: "\xABMoveVertical2D\xBB"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3003606026909670434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161968712753847334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2982863957094501583}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3307464153937649464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161968712753847334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d6bc3bfdfa1004a8deaea855ac4e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eAbilityTechniques: 0
+  AbilityAtk: 0
+  ComboMultiplier: 0
+  usageState: 0
+  eUnitPossesion: 0
+  isUsageRequirementsMet: 1
+  isSumOfAllRequirementsMet: 0
+  movementModesRequirement: 
+  rejectedAnimBoolParamStateNames: []
+  enabledAnimBoolParamStateNames: []
+  disabledAnimBoolParamStateNames: []
+  triggeredAnimTriggerParamStateNames: []
+  cooldownDuration: 0
+  curCooldownTimeElapsed: 0
+  activeDuration: 0
+  curActiveTimeElapsed: 0
+  Cost: 0
+  hasUseQuantityLimit: 0
+  useQuantityLimitCount: 0
+  icon: {fileID: 0}
+  cooldownProgressImg: {fileID: 0}
+  title: 
+  desc: 
+  devComment: 
+  devNotes: 
+  isDebugLog: 0
+  _ownerUnitRefs: {fileID: 0}
+  buttonDown: 0
+  button: 0
+  buttonUp: 0
+  Axis: 0
+  willActivateAbility_CurFrame: 0
+  willActivateAbility_OnButtonDown: 1
+  willActivateAbility_OnButton: 1
+  willActivateAbility_OnButtonUp: 0
+  willActivateAbility_OnAxisNotZero: 1
+  willActivateAbility_OnUpdate: 0
+  willExitAbility_OnButtonUp: 0
+  willExitAbility_OnAxisZero: 0
+  OnAbilityActiveEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityActiveStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityActiveExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityCooldownEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityCooldownStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAbilityCooldownExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUsageRequirementsNotMetEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2982863956839160955
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863956845264522}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2982863958263419446}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2982863956980455761
 GameObject:
@@ -262,7 +469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2982863958263419446}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2982863957034836261
 GameObject:
@@ -410,7 +617,7 @@ GameObject:
   - component: {fileID: 2982863957088085460}
   - component: {fileID: 2982863957088085466}
   - component: {fileID: 2982863957088085461}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5206,8 +5413,8 @@ Transform:
   m_Children:
   - {fileID: 2982863956852627033}
   - {fileID: 2982863957862712568}
-  - {fileID: 2982863958607841836}
-  - {fileID: 2982863958933029876}
+  - {fileID: 7345522147232434794}
+  - {fileID: 3003606026909670434}
   - {fileID: 2982863958125509345}
   - {fileID: 2982863958524735797}
   - {fileID: 2982863958038962124}
@@ -5273,7 +5480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863957134553854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MuzzleL
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5371,7 +5578,7 @@ GameObject:
   - component: {fileID: 2982863957145183461}
   - component: {fileID: 2982863957145183467}
   - component: {fileID: 2982863957145183466}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Particles '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10145,7 +10352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863957150512919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15303,7 +15510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2982863958263419446}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2982863957474956295
 GameObject:
@@ -15401,7 +15608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2982863957475110903}
   - component: {fileID: 2982863957475110900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Cosmetic \xABGroundEvade\xBB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15706,7 +15913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863957493031783}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MuzzleR
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15756,7 +15963,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2982863958263419446}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2982863957557208218
 GameObject:
@@ -15768,7 +15975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2982863957557208216}
   - component: {fileID: 2982863957557208219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Turret Large 2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -16272,7 +16479,7 @@ GameObject:
   - component: {fileID: 2982863957709051280}
   - component: {fileID: 2982863957709051281}
   - component: {fileID: 2982863957709051286}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HP
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -16407,10 +16614,9 @@ MonoBehaviour:
   onHitBoxDmgFilterTags:
   - ProjectileAI
   - Bomb
-  - Potion
   onHitBoxDmgFilterIgnoreTags: []
   onHitBoxDmgFilterIgnoreObj: []
-  onHitBoxDmgValue: 0a000000f4010000d4feffff
+  onHitBoxDmgValue: 0a000000f4010000
   isBlinking: 0
   DamageBlinkCount: 5
   DamageBlinkDelay: 0.1
@@ -16576,7 +16782,7 @@ GameObject:
   - component: {fileID: 2982863957841330243}
   - component: {fileID: 2982863957841330241}
   - component: {fileID: 2982863957841330240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Particles '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21435,7 +21641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2982863957943075447}
   - component: {fileID: 2982863957943075444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Engine
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -21607,7 +21813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863957977956343}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21638,7 +21844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863957992327129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MeshTransforms
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -21752,7 +21958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863958009538868}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\xABCosmetics\xBB"
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -21790,7 +21996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863958034088206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sockets
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -21927,7 +22133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2982863958060724909}
   - component: {fileID: 2982863958060724915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Turret Large 2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -22130,7 +22336,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2982863958263419446}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2982863958107908766
 GameObject:
@@ -22670,6 +22876,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2982863957643403781}
+  - {fileID: 2982863958607841836}
+  - {fileID: 2982863958933029876}
   - {fileID: 2982863956980455766}
   - {fileID: 2982863958874580902}
   - {fileID: 2982863958072430364}
@@ -23076,12 +23284,12 @@ GameObject:
   - component: {fileID: 2982863958607841836}
   - component: {fileID: 2982863958607841837}
   m_Layer: 0
-  m_Name: "\xABMoveHorizontal\xBB"
+  m_Name: "\xABMoveHorizontalVehicle2D\xBB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2982863958607841836
 Transform:
   m_ObjectHideFlags: 0
@@ -23089,12 +23297,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2982863958607841839}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2982863957094501583}
-  m_RootOrder: 2
+  m_Father: {fileID: 2982863958263419446}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2982863958607841837
 MonoBehaviour:
@@ -23291,7 +23499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863958643046607}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Meshes
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -23355,7 +23563,8 @@ GameObject:
   - component: {fileID: 2982863958729462473}
   - component: {fileID: 2982863958729462478}
   - component: {fileID: 2982863958729462477}
-  m_Layer: 0
+  - component: {fileID: 2104939801}
+  m_Layer: 6
   m_Name: Unit
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -23423,6 +23632,7 @@ MonoBehaviour:
   abilityIsGroundJumping: 0
   abilityCurrSprintAxis: 1
   abilityCurrMoveDir: {x: 0, y: 0}
+  abilityCurrMoveDirVehicleStyle: {x: 0, y: 0}
 --- !u!50 &2982863958729462478
 Rigidbody2D:
   serializedVersion: 4
@@ -23505,6 +23715,58 @@ PolygonCollider2D:
       - {x: -0.06, y: -0.82}
       - {x: -0.03, y: -0.37}
       - {x: 0.06, y: -0.35}
+--- !u!114 &2104939801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982863958729462472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fe144d9307f784594d7e94020fa7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToCall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  isPlayOnEnable: 0
+  isPlayOnStart: 0
+  isPlayOnAwake: 0
+  isPlayOnUpdate: 0
+  isPlayOnFixedUpdate: 0
+  isPlayOnLateUpdate: 0
+  isPlayOnGUI: 0
+  isPlayOnDisable: 1
+  isPlayOnDestroy: 0
+  isPlayOnApplicationPause: 0
+  isPlayOnTransformChildrenChanged: 0
+  isPlayOnTransformParentChanged: 0
+  isPlayOnBeforeTransformParentChanged: 0
+  isPlayOnCollisionEnter: 0
+  isPlayOnCollisionExit: 0
+  isPlayOnCollisionStay: 0
+  isPlayOnTriggerEnter: 0
+  isPlayOnTriggerExit: 0
+  isPlayOnTriggerStay: 0
+  isPlayOnCollisionEnter2D: 0
+  isPlayOnCollisionExit2D: 0
+  isPlayOnCollisionStay2D: 0
+  isPlayOnTriggerEnter2D: 0
+  isPlayOnTriggerExit2D: 0
+  isPlayOnTriggerStay2D: 0
 --- !u!1 &2982863958769234345
 GameObject:
   m_ObjectHideFlags: 0
@@ -23514,7 +23776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863958769234350}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\xAB\xABEquipped Props\xBB\xBB | Components"
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -28399,7 +28661,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2982863958263419446}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2982863958883981287
 GameObject:
@@ -28411,7 +28673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2982863958883981284}
   - component: {fileID: 2982863958883981290}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Aim Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28550,7 +28812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2982863958906294272}
   - component: {fileID: 2982863958906294278}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Aim Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28690,7 +28952,7 @@ GameObject:
   - component: {fileID: 2982863958911059676}
   - component: {fileID: 2982863958911059746}
   - component: {fileID: 2982863958911059677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Cosmetic \xABGroundSprint\xBB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33466,12 +33728,12 @@ GameObject:
   - component: {fileID: 2982863958933029876}
   - component: {fileID: 2982863958933029877}
   m_Layer: 0
-  m_Name: "\xABMoveVertical\xBB"
+  m_Name: "\xABMoveVerticalVehicle2D\xBB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2982863958933029876
 Transform:
   m_ObjectHideFlags: 0
@@ -33479,12 +33741,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2982863958933029879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2982863957094501583}
-  m_RootOrder: 3
+  m_Father: {fileID: 2982863958263419446}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2982863958933029877
 MonoBehaviour:
@@ -33567,7 +33829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2982863958966622037}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33846,12 +34108,14 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 31e56ff528637fc48ad5e5e92a943f2e, type: 3}
 --- !u!4 &388078235417958062 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 31e56ff528637fc48ad5e5e92a943f2e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 31e56ff528637fc48ad5e5e92a943f2e,
+    type: 3}
   m_PrefabInstance: {fileID: 388078235417824300}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &388078235417725582 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 31e56ff528637fc48ad5e5e92a943f2e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 31e56ff528637fc48ad5e5e92a943f2e,
+    type: 3}
   m_PrefabInstance: {fileID: 388078235417824300}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1071142631507372509

@@ -3,12 +3,11 @@ using UnityEngine;
 
 public class AbilityCompMotionGroundEvade2D : AbilityBaseComp
 {
-
     [Header("AbilityComp")]
     public float evadeAcelSpeed = 1000f;
     protected override void Awake()
     {
-        eAbilityTechniques = EAbilityTechniques.GroundEvade;
+        eAbilityTechniques = EAbilityTechniques.GroundEvade2D;
         base.Awake();
         desc = "Evade";
         devComment = "Evade";

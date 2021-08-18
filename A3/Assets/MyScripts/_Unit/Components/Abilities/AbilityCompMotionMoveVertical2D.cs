@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class AbilityCompMotionMoveVerticalVehicle2D : AbilityBaseComp
+public class AbilityCompMotionMoveVertical2D : AbilityBaseComp
 {
     protected override void Awake()
     {
-        eAbilityTechniques = EAbilityTechniques.MoveVerticalVehicle2D;
+        eAbilityTechniques = EAbilityTechniques.MoveVertical2D;
         base.Awake();
         desc = "Move Forward or Backwards";
         devComment = "Sync MoveVertical Axis with abilityCurrMoveDir.y float variable in _unitCharacterController, AI Requires both axis to be passed as parameters";
@@ -30,7 +30,7 @@ public class AbilityCompMotionMoveVerticalVehicle2D : AbilityBaseComp
     {
         base.OnUsageRequirementsNotMet();
         Axis = 0;
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.y = 0;
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = 0;
     }
     public override void AbilityFunctionality()
     {
@@ -40,7 +40,7 @@ public class AbilityCompMotionMoveVerticalVehicle2D : AbilityBaseComp
     public override void AbilityFunctionalityPlayer()
     {
         base.AbilityFunctionalityPlayer();
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.y = Axis;
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = Axis;
 
     }
 
@@ -49,11 +49,11 @@ public class AbilityCompMotionMoveVerticalVehicle2D : AbilityBaseComp
         base.AbilityFunctionalityAI();
         if (buttonDown)
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.y = Axis;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = Axis;
         }
         else
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.y = 0;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = 0;
         }
     }
 

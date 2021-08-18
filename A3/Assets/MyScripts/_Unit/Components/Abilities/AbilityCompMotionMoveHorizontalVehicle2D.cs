@@ -5,7 +5,7 @@ public class AbilityCompMotionMoveHorizontalVehicle2D : AbilityBaseComp
 {
     protected override void Awake()
     {
-        eAbilityTechniques = EAbilityTechniques.MoveHorizontal;
+        eAbilityTechniques = EAbilityTechniques.MoveHorizontalVehicle2D;
         base.Awake();
         desc = "Move Right or Left";
         devComment = "Sync MoveHorizontal Axis with abilityCurrMoveDir.x float variable in _unitCharacterController, AI Requires both axis to be passed as parameters";
@@ -27,7 +27,7 @@ public class AbilityCompMotionMoveHorizontalVehicle2D : AbilityBaseComp
     {
         base.OnUsageRequirementsNotMet();
         Axis = 0;
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = 0;
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.x = 0;
     }
 
     public override void AbilityFunctionality()
@@ -38,7 +38,7 @@ public class AbilityCompMotionMoveHorizontalVehicle2D : AbilityBaseComp
     public override void AbilityFunctionalityPlayer()
     {
         base.AbilityFunctionalityPlayer();
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = Axis;
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.x = Axis;
     }
 
     public override void AbilityFunctionalityAI()
@@ -46,11 +46,11 @@ public class AbilityCompMotionMoveHorizontalVehicle2D : AbilityBaseComp
         base.AbilityFunctionalityAI();
         if (buttonDown)
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = Axis;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.x = Axis;
         }
         else
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = 0;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle.x = 0;
         }
     }
 

@@ -72,9 +72,8 @@ public class UnitCompMotionCharacterController2D : MonoBehaviour
     {
         var moveTopDownSpd = Vector2.up * Mathf.Clamp(abilityCurrMoveDir.y * MoveAcelSpeed * Time.deltaTime, -maxMoveAcelSpeed, maxMoveAcelSpeed)
             + Vector2.right * Mathf.Clamp(abilityCurrMoveDir.x * MoveAcelSpeed * Time.deltaTime, -maxMoveAcelSpeed, maxMoveAcelSpeed);
-        _rigidbody2D.velocity = moveTopDownSpd;
-        transform.eulerAngles = Vector3.forward* (Vector2.Angle(transform.position, transform.position*Vector2.one*moveTopDownSpd) - 180);
-
+        //_rigidbody2D.velocity = moveTopDownSpd;
+        transform.rotation = Quaternion.LookRotation(moveTopDownSpd);
 
         if (abilityCurrMoveDirVehicleStyle == Vector2.zero)
         {

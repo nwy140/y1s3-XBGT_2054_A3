@@ -64,6 +64,11 @@ public enum EAbilityTechniques
 
 
     #region 2D
+    MoveHorizontal2D,
+    MoveHorizontalVehicle2D,
+    MoveVertical2D,
+    MoveVerticalVehicle2D,
+    GroundEvade2D,
     RegularAtkRange2D,
     RegularAtkAim,
     #endregion 2D
