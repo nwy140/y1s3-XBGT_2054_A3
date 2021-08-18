@@ -3,14 +3,14 @@ using UnityEngine;
 namespace experimental
 {
 
-    public class CharState : StateMachineBehaviour
+    public class UnitStates : StateMachineBehaviour
     {
-        public List<StateData> ListAbilityData = new List<StateData>();
-        public void UpdateAll(CharState charState, Animator animator)
+        public List<StateData> ListStates = new List<StateData>();
+        public void UpdateAll(UnitStates charState, Animator animator)
         {
-            foreach(StateData d in ListAbilityData)
+            foreach(StateData d in ListStates)
             {
-                d.UpdateAbility(charState, animator);
+                d.UpdateState(charState, animator);
             }
         }
 

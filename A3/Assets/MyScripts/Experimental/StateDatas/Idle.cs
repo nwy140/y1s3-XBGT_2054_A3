@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace experimental
 {
-    [CreateAssetMenu(fileName = "Idle", menuName = "AbilityData/Idle")]
+    [CreateAssetMenu(fileName = "Idle", menuName = "AnimFSM/Idle")]
     public class Idle : StateData
     {
-        public override void UpdateAbility(CharState charState, Animator animator)
+        public override void UpdateState(UnitStates charState, Animator animator)
         {
-            base.UpdateAbility(charState, animator);
-            Debug.Log("Idle" + willActivateAbility_CurFrame + usageState);
+            base.UpdateState(charState, animator);
         }
     }
 }
