@@ -134,10 +134,13 @@ public class AbilityBaseComp : MonoBehaviour
     public bool willExitAbility_OnButtonUp;
     public bool willExitAbility_OnAxisZero;
 
+    experimental.StateData s;
+
     public virtual void ResetInitialButtonAndAxisValues()
     {
         Axis = 0;
         button = false;
+       
     }
     public virtual void ResetInitialButtonDownUpValues()
     {
@@ -186,10 +189,7 @@ public class AbilityBaseComp : MonoBehaviour
     //}
 
 
-    public virtual void Update()
-    {
-        UpdateAbilityUsageState();
-    }
+ 
 
     // TODO: Interrupt Ability // Can also be done via Behavior Designer Nodes
     #region CoolDown Timer

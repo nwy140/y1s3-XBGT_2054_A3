@@ -72,8 +72,7 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
     void OnGUI()
     {
         if (cursor)
-        {
-
+        { 
             cursor.SetActive(button);
             if (button == false)
             {
