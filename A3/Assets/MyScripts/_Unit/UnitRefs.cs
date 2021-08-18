@@ -16,7 +16,7 @@ public class UnitRefs : MonoBehaviour
     [Header("Hierachy")]
     public GameObject CosmeticObj;
 
-    [Header("Ability Related")]
+    [Header("OLD--Ability Related")]
     //public SupportCompCombatMeleeAtkHandler meleeHandler;
     public UnitCompAbilityManager unitCompAbilityManager;
 
@@ -33,7 +33,7 @@ public class UnitRefs : MonoBehaviour
     ////public CharCompAITargetingSystem _charCompAITargetingSystem_360Vision_Close;
 
 
-    [Header("Ability Motion")]
+    [Header("Old--Ability Motion")]
     //public CharacterController _characterController; // built-in character controller
     public UnitCompMotionCharacterController2D _unitCharacterController;
     //public UnitCompMotionCharacterController _unitCharacterController;
@@ -70,7 +70,8 @@ public class UnitRefs : MonoBehaviour
     private void Awake()
     {
         // Ref: TryGetComponent https://medium.com/chenjd-xyz/unity-tip-use-trygetcomponent-instead-of-getcomponent-to-avoid-memory-allocation-in-the-editor-fe0c3121daf6
-        hasAnim = TryGetComponent(out _anim);
+        if(hasAnim == false)
+            hasAnim = TryGetComponent(out _anim);
         //TryGetComponent(out _characterController);
         TryGetComponent(out _unitCharacterController);
         //TryGetComponent(out _basicRigidBodyPush);

@@ -34,7 +34,7 @@ public class UnitCompMotionCharacterController2D : MonoBehaviour
     bool _hasUnitRefs;
 
     [Header("Set in Awake")]
-    private bool _hasAnimator;
+    //private bool _hasAnimator;
     private Animator _animator;
     private bool hasRigidbody2D;
     public Rigidbody2D _rigidbody2D;
@@ -52,7 +52,8 @@ public class UnitCompMotionCharacterController2D : MonoBehaviour
     private void Awake()
     {
         _hasUnitRefs = TryGetComponent(out _UnitRefs);
-        _hasAnimator = TryGetComponent(out _animator);
+        //_hasAnimator = TryGetComponent(out _animator);
+        _animator = _UnitRefs._anim;
         hasRigidbody2D = TryGetComponent(out _rigidbody2D);
     }
     private void FixedUpdate()
