@@ -188,8 +188,12 @@ public class AbilityBaseComp : MonoBehaviour
     //    // Evaluate Input
     //}
 
+    private void Update()
+    {
+        UpdateAbilityUsageState();
+    }
 
- 
+
 
     // TODO: Interrupt Ability // Can also be done via Behavior Designer Nodes
     #region CoolDown Timer

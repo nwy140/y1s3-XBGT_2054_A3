@@ -1,21 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class AbilityCompMotionMoveVertical : AbilityBaseComp
+public class AbilityCompMotionMoveHorizontalVehicle2D : AbilityBaseComp
 {
     protected override void Awake()
     {
-        eAbilityTechniques = EAbilityTechniques.MoveVertical;
+        eAbilityTechniques = EAbilityTechniques.MoveHorizontal;
         base.Awake();
-        desc = "Move Forward or Backwards";
-        devComment = "Sync MoveVertical Axis with abilityCurrMoveDir.y float variable in _unitCharacterController, AI Requires both axis to be passed as parameters";
-        
-        if(eUnitPossesion == EUnitPossesionType.player)
-        {
-            willActivateAbility_OnUpdate = true;
-        }
+        desc = "Move Right or Left";
+        devComment = "Sync MoveHorizontal Axis with abilityCurrMoveDir.x float variable in _unitCharacterController, AI Requires both axis to be passed as parameters";
         rejectedAnimBoolParamStateNames.Add(nameof(EUnitAnimParamNames.isActionLocked));
     }
+
     public override void OnInit()
     {
         if (eUnitPossesion == EUnitPossesionType.ai)
@@ -26,12 +22,14 @@ public class AbilityCompMotionMoveVertical : AbilityBaseComp
             willActivateAbility_OnUpdate = true;
         }
     }
+
     public override void OnUsageRequirementsNotMet()
     {
         base.OnUsageRequirementsNotMet();
         Axis = 0;
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = 0;
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = 0;
     }
+
     public override void AbilityFunctionality()
     {
         base.AbilityFunctionality();
@@ -40,8 +38,7 @@ public class AbilityCompMotionMoveVertical : AbilityBaseComp
     public override void AbilityFunctionalityPlayer()
     {
         base.AbilityFunctionalityPlayer();
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = Axis;
-
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = Axis;
     }
 
     public override void AbilityFunctionalityAI()
@@ -49,11 +46,11 @@ public class AbilityCompMotionMoveVertical : AbilityBaseComp
         base.AbilityFunctionalityAI();
         if (buttonDown)
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = Axis;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = Axis;
         }
         else
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = 0;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = 0;
         }
     }
 

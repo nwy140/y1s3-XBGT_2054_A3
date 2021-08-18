@@ -31,13 +31,7 @@ public class UnitCompAbilityManager : MonoBehaviour
         activeAblComponent = new List<AbilityBaseComp>(System.Array.FindAll(unitAblComponents.ToArray(), a => a.isActiveAndEnabled && a.isUsageRequirementsMet));
     }
 
-    private void Update()
-    {
-        foreach (AbilityBaseComp ablComp in activeAblComponent)
-        {
-            ablComp.UpdateAbilityUsageState();
-        }
-    }
+
 
     public AbilityBaseComp GetActiveAbilityCompByEnum(EAbilityTechniques eAbilityTechniques)
     {

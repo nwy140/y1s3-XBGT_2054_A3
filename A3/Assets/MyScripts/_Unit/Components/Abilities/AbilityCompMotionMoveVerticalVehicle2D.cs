@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class AbilityCompMotionMoveHorizontal : AbilityBaseComp
+public class AbilityCompMotionMoveVerticalVehicle2D : AbilityBaseComp
 {
     protected override void Awake()
     {
-        eAbilityTechniques = EAbilityTechniques.MoveHorizontal;
+        eAbilityTechniques = EAbilityTechniques.MoveVertical;
         base.Awake();
-        desc = "Move Right or Left";
-        devComment = "Sync MoveHorizontal Axis with abilityCurrMoveDir.x float variable in _unitCharacterController, AI Requires both axis to be passed as parameters";
+        desc = "Move Forward or Backwards";
+        devComment = "Sync MoveVertical Axis with abilityCurrMoveDir.y float variable in _unitCharacterController, AI Requires both axis to be passed as parameters";
+        
+        if(eUnitPossesion == EUnitPossesionType.player)
+        {
+            willActivateAbility_OnUpdate = true;
+        }
         rejectedAnimBoolParamStateNames.Add(nameof(EUnitAnimParamNames.isActionLocked));
     }
-
     public override void OnInit()
     {
         if (eUnitPossesion == EUnitPossesionType.ai)
@@ -22,14 +26,12 @@ public class AbilityCompMotionMoveHorizontal : AbilityBaseComp
             willActivateAbility_OnUpdate = true;
         }
     }
-
     public override void OnUsageRequirementsNotMet()
     {
         base.OnUsageRequirementsNotMet();
         Axis = 0;
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = 0;
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = 0;
     }
-
     public override void AbilityFunctionality()
     {
         base.AbilityFunctionality();
@@ -38,7 +40,8 @@ public class AbilityCompMotionMoveHorizontal : AbilityBaseComp
     public override void AbilityFunctionalityPlayer()
     {
         base.AbilityFunctionalityPlayer();
-        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = Axis;
+        _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = Axis;
+
     }
 
     public override void AbilityFunctionalityAI()
@@ -46,11 +49,11 @@ public class AbilityCompMotionMoveHorizontal : AbilityBaseComp
         base.AbilityFunctionalityAI();
         if (buttonDown)
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = Axis;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = Axis;
         }
         else
         {
-            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.x = 0;
+            _ownerUnitRefs._unitCharacterController.abilityCurrMoveDir.y = 0;
         }
     }
 

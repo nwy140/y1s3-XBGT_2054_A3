@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class AbilityCompMotionGroundEvade : AbilityBaseComp
+public class AbilityCompMotionGroundEvade2D : AbilityBaseComp
 {
 
     [Header("AbilityComp")]
