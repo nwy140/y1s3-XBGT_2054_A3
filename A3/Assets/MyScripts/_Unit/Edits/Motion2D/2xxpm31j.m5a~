@@ -73,14 +73,10 @@ public class UnitCompMotionCharacterController2D : MonoBehaviour
         var moveTopDownDir = Vector2.up * Mathf.Clamp(abilityCurrMoveDir.y * MoveAcelSpeed * Time.deltaTime, -maxMoveAcelSpeed, maxMoveAcelSpeed)
             + Vector2.right * Mathf.Clamp(abilityCurrMoveDir.x * MoveAcelSpeed * Time.deltaTime, -maxMoveAcelSpeed, maxMoveAcelSpeed);
         var moveTopDownMagnitude = moveTopDownDir.magnitude;
+        moveTopDownDir.Normalize();
         _rigidbody2D.velocity = moveTopDownDir;
+        transform.eulerAngles = Vector3.forward* (Vector2.Angle(transform.position, transform.position*Vector2.one*moveTopDownDir) - 180);
 
-        if(moveTopDownDir != Vector2.zero)
-        {
-            // Rotation Ref: https://youtu.be/gs7y2b0xthU
-            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, moveTopDownDir);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotationSmoothTime * Time.deltaTime);
-        }
 
         if (abilityCurrMoveDirVehicleStyle == Vector2.zero)
         {
