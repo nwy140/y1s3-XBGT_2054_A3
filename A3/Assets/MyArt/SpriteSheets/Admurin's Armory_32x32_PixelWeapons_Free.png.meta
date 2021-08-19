@@ -1,0 +1,2328 @@
+fileFormatVersion: 2
+guid: 1db1b42fa4a0d7c41ae092e6d200dcc0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4002608740849141508
+    second: Admurin's Armory_32x32_PixelWeapons_Free_0
+  - first:
+      213: -1230393069023284514
+    second: Admurin's Armory_32x32_PixelWeapons_Free_1
+  - first:
+      213: -2578679470282638194
+    second: Admurin's Armory_32x32_PixelWeapons_Free_2
+  - first:
+      213: -2122783599470268595
+    second: Admurin's Armory_32x32_PixelWeapons_Free_3
+  - first:
+      213: -8042819846151701369
+    second: Admurin's Armory_32x32_PixelWeapons_Free_4
+  - first:
+      213: -330960926454690425
+    second: Admurin's Armory_32x32_PixelWeapons_Free_5
+  - first:
+      213: 8215005120381515357
+    second: Admurin's Armory_32x32_PixelWeapons_Free_6
+  - first:
+      213: 2926565145577756327
+    second: Admurin's Armory_32x32_PixelWeapons_Free_7
+  - first:
+      213: 8999625416097846924
+    second: Admurin's Armory_32x32_PixelWeapons_Free_8
+  - first:
+      213: 5900068694403333227
+    second: Admurin's Armory_32x32_PixelWeapons_Free_9
+  - first:
+      213: -2735812287464994000
+    second: Admurin's Armory_32x32_PixelWeapons_Free_10
+  - first:
+      213: -1768091900322404172
+    second: Admurin's Armory_32x32_PixelWeapons_Free_11
+  - first:
+      213: -8999502582594645082
+    second: Admurin's Armory_32x32_PixelWeapons_Free_12
+  - first:
+      213: 8493796138049642905
+    second: Admurin's Armory_32x32_PixelWeapons_Free_13
+  - first:
+      213: -5015352199023685619
+    second: Admurin's Armory_32x32_PixelWeapons_Free_14
+  - first:
+      213: 1265261094300303042
+    second: Admurin's Armory_32x32_PixelWeapons_Free_15
+  - first:
+      213: -1280376072985426538
+    second: Admurin's Armory_32x32_PixelWeapons_Free_16
+  - first:
+      213: 8000423777278206369
+    second: Admurin's Armory_32x32_PixelWeapons_Free_17
+  - first:
+      213: 4704406277355409065
+    second: Admurin's Armory_32x32_PixelWeapons_Free_18
+  - first:
+      213: 4553691408755212008
+    second: Admurin's Armory_32x32_PixelWeapons_Free_19
+  - first:
+      213: -452962562394993148
+    second: Admurin's Armory_32x32_PixelWeapons_Free_20
+  - first:
+      213: 6352772478608437857
+    second: Admurin's Armory_32x32_PixelWeapons_Free_21
+  - first:
+      213: -2307760527984483814
+    second: Admurin's Armory_32x32_PixelWeapons_Free_22
+  - first:
+      213: -2904190046322792269
+    second: Admurin's Armory_32x32_PixelWeapons_Free_23
+  - first:
+      213: -657156523227934157
+    second: Admurin's Armory_32x32_PixelWeapons_Free_24
+  - first:
+      213: 7848460686679612330
+    second: Admurin's Armory_32x32_PixelWeapons_Free_25
+  - first:
+      213: -4073356802046672203
+    second: Admurin's Armory_32x32_PixelWeapons_Free_26
+  - first:
+      213: -2320129858497436583
+    second: Admurin's Armory_32x32_PixelWeapons_Free_27
+  - first:
+      213: 6191555403703716646
+    second: Admurin's Armory_32x32_PixelWeapons_Free_28
+  - first:
+      213: 4038864627799988213
+    second: Admurin's Armory_32x32_PixelWeapons_Free_29
+  - first:
+      213: 6418665299497906871
+    second: Admurin's Armory_32x32_PixelWeapons_Free_30
+  - first:
+      213: 641823537419531528
+    second: Admurin's Armory_32x32_PixelWeapons_Free_31
+  - first:
+      213: -7569204064268522326
+    second: Admurin's Armory_32x32_PixelWeapons_Free_32
+  - first:
+      213: 610322894218731804
+    second: Admurin's Armory_32x32_PixelWeapons_Free_33
+  - first:
+      213: -6947675524977541345
+    second: Admurin's Armory_32x32_PixelWeapons_Free_34
+  - first:
+      213: 7951733160080073343
+    second: Admurin's Armory_32x32_PixelWeapons_Free_35
+  - first:
+      213: 282420643006294817
+    second: Admurin's Armory_32x32_PixelWeapons_Free_36
+  - first:
+      213: 1991262610109032255
+    second: Admurin's Armory_32x32_PixelWeapons_Free_37
+  - first:
+      213: 2482486064063086916
+    second: Admurin's Armory_32x32_PixelWeapons_Free_38
+  - first:
+      213: -1250668648239865802
+    second: Admurin's Armory_32x32_PixelWeapons_Free_39
+  - first:
+      213: 6847462458914740359
+    second: Admurin's Armory_32x32_PixelWeapons_Free_40
+  - first:
+      213: -5074723050131022480
+    second: Admurin's Armory_32x32_PixelWeapons_Free_41
+  - first:
+      213: -8441217729532597180
+    second: Admurin's Armory_32x32_PixelWeapons_Free_42
+  - first:
+      213: 4351868907713245206
+    second: Admurin's Armory_32x32_PixelWeapons_Free_43
+  - first:
+      213: -3897769100284961162
+    second: Admurin's Armory_32x32_PixelWeapons_Free_44
+  - first:
+      213: 4400098921512449252
+    second: Admurin's Armory_32x32_PixelWeapons_Free_45
+  - first:
+      213: 4068261384767842813
+    second: Admurin's Armory_32x32_PixelWeapons_Free_46
+  - first:
+      213: 2143563116844720787
+    second: Admurin's Armory_32x32_PixelWeapons_Free_47
+  - first:
+      213: 8076586045288441856
+    second: Admurin's Armory_32x32_PixelWeapons_Free_48
+  - first:
+      213: 8407330156546005700
+    second: Admurin's Armory_32x32_PixelWeapons_Free_49
+  - first:
+      213: -2094824267642448261
+    second: Admurin's Armory_32x32_PixelWeapons_Free_50
+  - first:
+      213: 4007859763165683646
+    second: Admurin's Armory_32x32_PixelWeapons_Free_51
+  - first:
+      213: -4994851940237082972
+    second: Admurin's Armory_32x32_PixelWeapons_Free_52
+  - first:
+      213: 1326646805791862102
+    second: Admurin's Armory_32x32_PixelWeapons_Free_53
+  - first:
+      213: 1090831112894536812
+    second: Admurin's Armory_32x32_PixelWeapons_Free_54
+  - first:
+      213: 1067452732366155847
+    second: Admurin's Armory_32x32_PixelWeapons_Free_55
+  - first:
+      213: 6246516581202847576
+    second: Admurin's Armory_32x32_PixelWeapons_Free_56
+  - first:
+      213: -9154095973601886504
+    second: Admurin's Armory_32x32_PixelWeapons_Free_57
+  - first:
+      213: 6321001188151004584
+    second: Admurin's Armory_32x32_PixelWeapons_Free_58
+  - first:
+      213: -6503177661904504990
+    second: Admurin's Armory_32x32_PixelWeapons_Free_59
+  - first:
+      213: 9075174230385256694
+    second: Admurin's Armory_32x32_PixelWeapons_Free_60
+  - first:
+      213: 3725264236494266258
+    second: Admurin's Armory_32x32_PixelWeapons_Free_61
+  - first:
+      213: -7840869126047331739
+    second: Admurin's Armory_32x32_PixelWeapons_Free_62
+  - first:
+      213: 5359282096006040401
+    second: Admurin's Armory_32x32_PixelWeapons_Free_63
+  - first:
+      213: -6266798157043291513
+    second: Admurin's Armory_32x32_PixelWeapons_Free_64
+  - first:
+      213: 4683669764500580464
+    second: Admurin's Armory_32x32_PixelWeapons_Free_65
+  - first:
+      213: 8208090614611789621
+    second: Admurin's Armory_32x32_PixelWeapons_Free_66
+  - first:
+      213: 1077692079293882574
+    second: Admurin's Armory_32x32_PixelWeapons_Free_67
+  - first:
+      213: 7101827117675644105
+    second: Admurin's Armory_32x32_PixelWeapons_Free_68
+  - first:
+      213: -7375323693311177524
+    second: Admurin's Armory_32x32_PixelWeapons_Free_69
+  - first:
+      213: -8498420274108077279
+    second: Admurin's Armory_32x32_PixelWeapons_Free_70
+  - first:
+      213: 9141928697097170125
+    second: Admurin's Armory_32x32_PixelWeapons_Free_71
+  - first:
+      213: -9163002308594685504
+    second: Admurin's Armory_32x32_PixelWeapons_Free_72
+  - first:
+      213: -2102334531869266775
+    second: Admurin's Armory_32x32_PixelWeapons_Free_73
+  - first:
+      213: -5920163375306946249
+    second: Admurin's Armory_32x32_PixelWeapons_Free_74
+  - first:
+      213: 8750551467811691938
+    second: Admurin's Armory_32x32_PixelWeapons_Free_75
+  - first:
+      213: -2104103264373245728
+    second: Admurin's Armory_32x32_PixelWeapons_Free_76
+  - first:
+      213: 2624684434059465051
+    second: Admurin's Armory_32x32_PixelWeapons_Free_77
+  - first:
+      213: -6160344673578742349
+    second: Admurin's Armory_32x32_PixelWeapons_Free_78
+  - first:
+      213: 1981053199639645992
+    second: Admurin's Armory_32x32_PixelWeapons_Free_79
+  - first:
+      213: 726577839833653070
+    second: Admurin's Armory_32x32_PixelWeapons_Free_80
+  - first:
+      213: 5057714086415834307
+    second: Admurin's Armory_32x32_PixelWeapons_Free_81
+  - first:
+      213: -756311583655393725
+    second: Admurin's Armory_32x32_PixelWeapons_Free_82
+  - first:
+      213: -3573003408337838
+    second: Admurin's Armory_32x32_PixelWeapons_Free_83
+  - first:
+      213: -1490619005508470654
+    second: Admurin's Armory_32x32_PixelWeapons_Free_84
+  - first:
+      213: 4583609915713357439
+    second: Admurin's Armory_32x32_PixelWeapons_Free_85
+  - first:
+      213: -370137235499898377
+    second: Admurin's Armory_32x32_PixelWeapons_Free_86
+  - first:
+      213: 168895253398443440
+    second: Admurin's Armory_32x32_PixelWeapons_Free_87
+  - first:
+      213: -354253347501439961
+    second: Admurin's Armory_32x32_PixelWeapons_Free_88
+  - first:
+      213: 9056281446331088476
+    second: Admurin's Armory_32x32_PixelWeapons_Free_89
+  - first:
+      213: 8688026950847915920
+    second: Admurin's Armory_32x32_PixelWeapons_Free_90
+  - first:
+      213: 4519766366903297737
+    second: Admurin's Armory_32x32_PixelWeapons_Free_91
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407cf2d617f1c8730800000000000000
+      internalID: 4002608740849141508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 420
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2b3cac504cceee0800000000000000
+      internalID: -1230393069023284514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 419
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cf5382fa0b63cd0800000000000000
+      internalID: -2578679470282638194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 418
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fac82309b5a82e0800000000000000
+      internalID: -2122783599470268595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 422
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c7aad66f9226090800000000000000
+      internalID: -8042819846151701369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_5
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 419
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d42287ac0386bf0800000000000000
+      internalID: -330960926454690425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 419
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56fa5cc1af810270800000000000000
+      internalID: 8215005120381515357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_7
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 390
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6933a8e7f3d9820800000000000000
+      internalID: 2926565145577756327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 387
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86d61642a715ec70800000000000000
+      internalID: 8999625416097846924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 387
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c3058b73141e150800000000000000
+      internalID: 5900068694403333227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 387
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b00813831780ad0800000000000000
+      internalID: -2735812287464994000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 388
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8a90fc8c97677e0800000000000000
+      internalID: -1768091900322404172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_12
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 387
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a35c3125185b1380800000000000000
+      internalID: -8999502582594645082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 387
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991a803e59600e570800000000000000
+      internalID: 8493796138049642905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 356
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0018b95fb3e56ab0800000000000000
+      internalID: -5015352199023685619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 355
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce34e9f24c1f8110800000000000000
+      internalID: 1265261094300303042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_16
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 355
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6954bceceb03b3ee0800000000000000
+      internalID: -1280376072985426538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_17
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 355
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1a1419907370f60800000000000000
+      internalID: 8000423777278206369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_18
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 355
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae03e09598694140800000000000000
+      internalID: 4704406277355409065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_19
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 357
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee3a93b536f13f30800000000000000
+      internalID: 4553691408755212008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_20
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 355
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e45eb03f0c6b9f0800000000000000
+      internalID: -452962562394993148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_21
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 359
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162755e29e4992850800000000000000
+      internalID: 6352772478608437857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_22
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 360
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1221ded60039ffd0800000000000000
+      internalID: -2307760527984483814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_23
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 358
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b864b83a8e32b7d0800000000000000
+      internalID: -2904190046322792269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_24
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 358
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3321b27bf9f41e6f0800000000000000
+      internalID: -657156523227934157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_25
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 358
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab182f59655bec60800000000000000
+      internalID: 7848460686679612330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_26
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 324
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b24692f1978877c0800000000000000
+      internalID: -4073356802046672203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_27
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 323
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954ab7faf2e3dcfd0800000000000000
+      internalID: -2320129858497436583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_28
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 323
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b09ecd5d2dce550800000000000000
+      internalID: 6191555403703716646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_29
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 341
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f798ebeafdec0830800000000000000
+      internalID: 4038864627799988213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_30
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 323
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2f2b4151ea31950800000000000000
+      internalID: 6418665299497906871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_31
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 323
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80530645b1738e800800000000000000
+      internalID: 641823537419531528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_32
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 322
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aace4d4c109c4f690800000000000000
+      internalID: -7569204064268522326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_33
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 322
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11223c407d487800800000000000000
+      internalID: 610322894218731804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_34
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 291
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fb90f9be5e49f90800000000000000
+      internalID: -6947675524977541345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_35
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 290
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f726443dd2b3a5e60800000000000000
+      internalID: 7951733160080073343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_36
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 291
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ba0a7141c5be300800000000000000
+      internalID: 282420643006294817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_37
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 292
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37e0123bc262ab10800000000000000
+      internalID: 1991262610109032255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_38
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 292
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44186582cef837220800000000000000
+      internalID: 2482486064063086916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_39
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 292
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630e1f1ad7bb4aee0800000000000000
+      internalID: -1250668648239865802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_40
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 290
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7889f64b3d2170f50800000000000000
+      internalID: 6847462458914740359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_41
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 260
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d147fd546f299b0800000000000000
+      internalID: -5074723050131022480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_42
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 258
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cea7fc235cada80800000000000000
+      internalID: -8441217729532597180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_43
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 259
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610b051e6b1f46c30800000000000000
+      internalID: 4351868907713245206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_44
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 259
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e550197a758e9c0800000000000000
+      internalID: -3897769100284961162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_45
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 259
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4345908aa401d30800000000000000
+      internalID: 4400098921512449252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_46
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 259
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9a684cc2e557830800000000000000
+      internalID: 4068261384767842813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_47
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 258
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392a8253c477fbd10800000000000000
+      internalID: 2143563116844720787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_48
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 228
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0086b43773cc51070800000000000000
+      internalID: 8076586045288441856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_49
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 227
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca9a52cb36dca470800000000000000
+      internalID: 8407330156546005700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_50
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 227
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76dd4c6d60bde2e0800000000000000
+      internalID: -2094824267642448261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_51
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 227
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf52155837ce9730800000000000000
+      internalID: 4007859763165683646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_52
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 229
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae7f7ccf98beaab0800000000000000
+      internalID: -4994851940237082972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_53
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 228
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d61a1bd32396210800000000000000
+      internalID: 1326646805791862102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_54
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 227
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cd5022e19632f00800000000000000
+      internalID: 1090831112894536812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_55
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 195
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740743fba9a50de00800000000000000
+      internalID: 1067452732366155847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_56
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 195
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857ee223cb510b650800000000000000
+      internalID: 6246516581202847576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_57
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 195
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de30a5663e16f080800000000000000
+      internalID: -9154095973601886504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_58
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 217
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad009c2715b8b750800000000000000
+      internalID: 6321001188151004584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_59
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 194
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2673dee2f5210c5a0800000000000000
+      internalID: -6503177661904504990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_60
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 196
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f864e451ee71fd70800000000000000
+      internalID: 9075174230385256694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_61
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 194
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f15b6f51cc2b330800000000000000
+      internalID: 3725264236494266258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_62
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 164
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a0f939213af2390800000000000000
+      internalID: -7840869126047331739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_63
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 163
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b0d8febaeff5a40800000000000000
+      internalID: 5359282096006040401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_64
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 163
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aac52774cd709a0800000000000000
+      internalID: -6266798157043291513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_65
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 163
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0786b4ee5dcbff040800000000000000
+      internalID: 4683669764500580464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_66
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 163
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5374728fceef8e170800000000000000
+      internalID: 8208090614611789621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_67
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 165
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0609b7c3bb4fe00800000000000000
+      internalID: 1077692079293882574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_68
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 165
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c40b4de222ce8260800000000000000
+      internalID: 7101827117675644105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_69
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 132
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc4aa45d2695a990800000000000000
+      internalID: -7375323693311177524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_70
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 131
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b6fc989cb8f0a80800000000000000
+      internalID: -8498420274108077279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_71
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 131
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc2d68c6b7aede70800000000000000
+      internalID: 9141928697097170125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_72
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 153
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c92120b2f976d080800000000000000
+      internalID: -9163002308594685504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_73
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 130
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac25e4c1e103d2e0800000000000000
+      internalID: -2102334531869266775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_74
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 132
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7394d8ac6ca57dda0800000000000000
+      internalID: -5920163375306946249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_75
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 131
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad50b39234307970800000000000000
+      internalID: 8750551467811691938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_76
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 99
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8fa44aa39bcc2e0800000000000000
+      internalID: -2104103264373245728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_77
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 99
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b519c9b2690cc6420800000000000000
+      internalID: 2624684434059465051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_78
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 99
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd8e55882f028aa0800000000000000
+      internalID: -6160344673578742349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_79
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 98
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f0ca5936d1e7b10800000000000000
+      internalID: 1981053199639645992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_80
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 100
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f94fc12b2551a00800000000000000
+      internalID: 726577839833653070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_81
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 103
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc1e482a2c903640800000000000000
+      internalID: 5057714086415834307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_82
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 67
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34605bc2f9a0185f0800000000000000
+      internalID: -756311583655393725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_83
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 67
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25490115f5e43fff0800000000000000
+      internalID: -3573003408337838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_84
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 67
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288b83189e1405be0800000000000000
+      internalID: -1490619005508470654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_85
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 85
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f768d0feee04c9f30800000000000000
+      internalID: 4583609915713357439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_86
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 67
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f922e735220ddaf0800000000000000
+      internalID: -370137235499898377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_87
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5501f8659085200800000000000000
+      internalID: 168895253398443440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_88
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 66
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7240fa51570751bf0800000000000000
+      internalID: -354253347501439961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_89
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 37
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e76824eff5ead70800000000000000
+      internalID: 9056281446331088476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_90
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 34
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0976f4c0b72129870800000000000000
+      internalID: 8688026950847915920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Admurin's Armory_32x32_PixelWeapons_Free_91
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 5
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6670f509f69be30800000000000000
+      internalID: 4519766366903297737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
