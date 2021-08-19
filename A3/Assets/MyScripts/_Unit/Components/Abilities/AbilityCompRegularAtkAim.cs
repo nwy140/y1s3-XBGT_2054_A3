@@ -42,24 +42,26 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
         }
         else if (eUnitPossesion == EUnitPossesionType.ai)
         {
-            targetPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+            targetPos = GameObject.FindGameObjectWithTag("Player").transform.position; 
+            // Or 
+            // Set Target pos as detected obj pos in SightPerception
         }
 
-        foreach (Transform muzzle in muzzleSockets)
-        {
-            bool hasImpactEffectComp;
-            ImpactEffect impactEffect;
-            var rot = Quaternion.Euler((Vector2Common.GetRotBetween2Pos(targetPos, muzzle.position) + aimRotOffset) * Vector3.forward);
-            muzzle.rotation = rot;
-            Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
-            Instantiate(muzzleFX, muzzle.position, muzzle.rotation);
-            hasImpactEffectComp = projectilePrefab.TryGetComponent(out impactEffect);
+        //foreach (Transform muzzle in muzzleSockets)
+        //{
+        //    bool hasImpactEffectComp;
+        //    ImpactEffect impactEffect;
+        //    var rot = Quaternion.Euler((Vector2Common.GetRotBetween2Pos(targetPos, muzzle.position) + aimRotOffset) * Vector3.forward);
+        //    muzzle.rotation = rot;
+        //    Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
+        //    Instantiate(muzzleFX, muzzle.position, muzzle.rotation);
+        //    hasImpactEffectComp = projectilePrefab.TryGetComponent(out impactEffect);
 
-            if (hasImpactEffectComp)
-            {
-                impactEffect.instigator = _ownerUnitRefs.gameObject;
-            }
-        }
+        //    if (hasImpactEffectComp)
+        //    {
+        //        impactEffect.instigator = _ownerUnitRefs.gameObject;
+        //    }
+        //}
     }
 
     public override void OnAbilityActiveEnter()
