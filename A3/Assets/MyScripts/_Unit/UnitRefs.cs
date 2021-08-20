@@ -114,4 +114,8 @@ public class UnitRefs : MonoBehaviour
 
 
     #endregion Comp Refs
+
+    #region Quick Refs
+    public Transform NavMeshAgentTargetDestinationPoint;
+    #endregion Quick Refs
 }

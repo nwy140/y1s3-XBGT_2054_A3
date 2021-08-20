@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Cinemachine;
 using UnityEngine.Animations;
+using UnityEngine.Events;
 
 #region Script (modified slightly by SInt) Taken From https://amirazmi.net/targeting-system/ // Uses a Trigger Collider for lock on
 /*******************************************************************/
@@ -40,6 +41,8 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
     public bool m_AxisLeft = false; //moving the axis to the left
     //private int m_NumberOfTargetsWithinRange = 0; //number of targets within range
     private Animator m_Animator; //animator for palyer
+
+    public UnityEvent OnDetected_TargetInFrontClosest;
 
     protected override void Awake()
     {
@@ -350,6 +353,7 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
         if (m_CandidateTargets.Count > 0)
         {
             m_targetInFrontClosest = m_CandidateTargets.First();
+            OnDetected_TargetInFrontClosest.Invoke();
         }
         else
         {

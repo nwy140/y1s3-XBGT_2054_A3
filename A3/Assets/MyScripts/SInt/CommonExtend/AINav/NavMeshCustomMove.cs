@@ -15,9 +15,9 @@ public class NavMeshCustomMove : MonoBehaviour
     private void Awake()
     {
         agent.updateUpAxis = false;
-        agent.updateRotation = false;
-        agent.updatePosition = false;
-        
+        //agent.updateRotation = false;
+        //agent.updatePosition = false;
+
     }
     private NavMeshPath path;
     private float elapsed = 0.0f;
@@ -44,11 +44,12 @@ public class NavMeshCustomMove : MonoBehaviour
 
     void Update()
     {
-        if(_ownerUnitRefs.unitCompAbilityManager.eUnitPossesion == EUnitPossesionType.ai)
+        if (_ownerUnitRefs.unitCompAbilityManager.eUnitPossesion == EUnitPossesionType.ai)
         {
 
-        agent.SetDestination(target.position);
-        CustomMove(agent.steeringTarget);
+            agent.SetDestination(target.position);
+            Vector2Common.LookAt2D(transform, target, 0.3f);
+            //CustomMove(agent.steeringTarget);
         }
 
     }
@@ -61,7 +62,7 @@ public class NavMeshCustomMove : MonoBehaviour
         _ownerUnitRefs.unitCompAbilityManager.BasicTaskAblSlot_A1.Axis = dir.normalized.x;
         _ownerUnitRefs.unitCompAbilityManager.BasicTaskAblSlot_A2.Axis = dir.normalized.y;
         //}
-        
+
     }
 
 }

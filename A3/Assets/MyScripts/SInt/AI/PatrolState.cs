@@ -31,44 +31,51 @@ public class PatrolState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        targetTime -= Time.deltaTime;
-        if (targetTime <= 0)
+        if (_ur.unitCompAbilityManager.eUnitPossesion == EUnitPossesionType.ai)
         {
-            randomSelectedPosInCircle = Vector2.one * _ur.transform.position + Random.insideUnitCircle * randomMoveRadius;
+            targetTime -= Time.deltaTime;
 
-            targetTime = timerInSeconds;
-            Vector2 dir = (Vector2.one * _ur.transform.position - randomSelectedPosInCircle).normalized;
-            Debug.DrawLine(randomSelectedPosInCircle, randomSelectedPosInCircle + dir * 10, Color.red, Mathf.Infinity);
-            vectorInput = dir;
-        }
-        angle = Vector2.Angle(_ur.transform.up, randomSelectedPosInCircle - _ur.transform.position * Vector2.one);
-        if (angle < targetAngle)
-        {
-            vectorInput = Vector2.zero;
-            angle = 0;
-        }
-        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveHorizontal).Axis = vectorInput.x;
-        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveHorizontal).buttonDown = true;
-        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical).Axis = 1.5f;
-        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical).buttonDown = true;
-
-        var lockOnSightPerceptionAblComp = (AbilityCompAssistCameraLockOn)(_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.LockOn));
-        foreach (var obj in lockOnSightPerceptionAblComp.m_CandidateTargets)
-        {
-            if(obj.tag == "Player")
+            if (targetTime <= 0)
             {
-                _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkAim).buttonDown = true;
+                _ur.NavMeshAgentTargetDestinationPoint.position = Vector2.one * _ur.transform.position + Random.insideUnitCircle * randomMoveRadius;
+                //randomSelectedPosInCircle = Vector2.one * _ur.transform.position + Random.insideUnitCircle * randomMoveRadius;
+
+                targetTime = timerInSeconds;
+                //Vector2 dir = (Vector2.one * _ur.transform.position - randomSelectedPosInCircle).normalized;
+                //Debug.DrawLine(randomSelectedPosInCircle, randomSelectedPosInCircle + dir * 10, Color.red, Mathf.Infinity);
+                //vectorInput = dir;
             }
+            //angle = Vector2.Angle(_ur.transform.up, randomSelectedPosInCircle - _ur.transform.position * Vector2.one);
+            //if (angle < targetAngle)
+            //{
+            //    vectorInput = Vector2.zero;
+            //    angle = 0;
+            //}
+            //_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveHorizontal2D).Axis = vectorInput.x;
+            //_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveHorizontal2D).buttonDown = true;
+            //_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical2D).Axis = 1.5f;
+            //_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical2D).buttonDown = true;
+
+
+            //var lockOnSightPerceptionAblComp = (AbilityCompAssistCameraLockOn2D)(_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.LockOn));
+            //foreach (var obj in lockOnSightPerceptionAblComp.m_CandidateTargets)
+            //{
+            //    if (obj.tag == "Player")
+            //    {
+            //        _ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkAim).buttonDown = true;
+            //    }
+            //}
         }
-        
 
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        //_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveHorizontal2D).Axis = 0;
+        //_ur.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.MoveVertical2D).Axis =0;
+
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
