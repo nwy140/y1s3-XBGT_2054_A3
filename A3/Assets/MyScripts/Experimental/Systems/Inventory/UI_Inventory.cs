@@ -25,7 +25,7 @@ public class UI_Inventory : MonoBehaviour
 
     public void UseItemByUIItemIndex(int index) // Wrapper
     {
-        var uiItemSlots = GetComponentsInChildren<UI_ItemSlot>();
+        var uiItemSlots = itemSlotContainer.GetComponentsInChildren<UI_ItemSlot>();
 
         if (uiItemSlots.Length > 0 && uiItemSlots.Length>index)
         {
@@ -55,10 +55,22 @@ public class UI_Inventory : MonoBehaviour
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 30f;
+
+        var uiItemSlots = itemSlotContainer.GetComponentsInChildren<UI_ItemSlot>();
+
+        foreach (UI_ItemSlot iSlot in uiItemSlots)
+        {
+            if (iSlot.ItemWorldParent.childCount > 0)
+            {
+                if (inventory.GetItemList().Contains(iSlot.ItemWorldParent.GetChild(0).GetComponent<ItemWorld>().item) == false)
+                {
+                    Destroy(iSlot.gameObject);
+                }
+            }
+        }
+
         foreach (Item item in inventory.GetItemList())
         {
-
-
             bool isExistingItemFound = false;
             RectTransform itemSlotRectTransform = null;
             UI_ItemSlot ui_ItemSlot = null;

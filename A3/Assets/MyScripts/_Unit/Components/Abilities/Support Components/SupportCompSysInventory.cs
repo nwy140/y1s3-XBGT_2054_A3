@@ -37,6 +37,8 @@ public class SupportCompSysInventory : MonoBehaviour, ISupportComp
                 break;
             case Item.ItemType.HP_Potion:
                 _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType1).buttonDown = true;
+                inventory.RemoveItem(item);
+                
                 break;
             case Item.ItemType.MP_Potion:
                 _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType2).buttonDown = true;

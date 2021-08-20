@@ -52,9 +52,9 @@ public class Item
             default:
             case ItemType.WP_Melee_Sword:
             case ItemType.AOE_Use:
+            case ItemType.HP_Potion:  
                 return false;
             case ItemType.Currency_Coin:
-            case ItemType.HP_Potion:  
             case ItemType.MP_Potion:  
                 return true;
         }
