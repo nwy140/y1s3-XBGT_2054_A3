@@ -1,0 +1,95 @@
+﻿using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+//ref: https://youtu.be/2WnAOV7nHW0
+public class UI_Inventory : MonoBehaviour
+{
+    public Inventory inventory;
+    public Transform itemSlotContainer;
+    public Transform itemSlotTemplate;
+    private void Awake()
+    {
+        if (itemSlotContainer == null)
+        {
+
+        }
+        if (itemSlotTemplate == null)
+        {
+            //itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
+        }
+    }
+    public void SetInventory(Inventory inventory)
+    {
+        this.inventory = inventory;
+
+        inventory.OnItemListChanged += Inventory_OnItemListChanged;
+        RefreshInventoryItems();
+    }
+
+    private void Inventory_OnItemListChanged(object sender, EventArgs e)
+    {
+        RefreshInventoryItems();
+    }
+
+
+    void RefreshInventoryItems()
+    {
+        //foreach (Transform child in itemSlotContainer)
+        //{
+        //    Destroy(child.gameObject);
+        //}
+
+        int x = 0;
+        int y = 0;
+        float itemSlotCellSize = 30f;
+        foreach (Item item in inventory.GetItemList())
+        {
+            bool isExistingItemFound = false;
+            RectTransform itemSlotRectTransform = null;
+            TextMeshProUGUI amountTextComp = null;
+            foreach (Transform i in itemSlotContainer)
+            {
+                if(i.GetChild(1).GetComponent<Image>().sprite == item.GetSprite())
+                {
+                    isExistingItemFound = true;
+                    itemSlotRectTransform = i.GetComponent<RectTransform>();
+                    amountTextComp = itemSlotRectTransform.GetComponentInChildren<TextMeshProUGUI>();
+
+                    break;
+                }
+            }
+            if (isExistingItemFound == false) {
+                itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
+                itemSlotRectTransform.gameObject.SetActive(true);
+                //itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+                Image image = itemSlotRectTransform.GetChild(1).GetComponent<Image>();
+                image.sprite = item.GetSprite();
+                amountTextComp = itemSlotRectTransform.GetComponentInChildren<TextMeshProUGUI>();
+            }
+
+            if (amountTextComp)
+            {
+                amountTextComp.transform.parent.gameObject.SetActive(item.IsStackable());
+                if (item.amount <= 1)
+                {
+                    amountTextComp.text = "";
+                }
+                else
+                {
+                    amountTextComp.text = item.amount.ToString();
+                }
+            }
+
+
+            x++;
+            if (x > 4)
+            {
+                x = 0;
+                y++;
+            }
+        }
+    }
+}

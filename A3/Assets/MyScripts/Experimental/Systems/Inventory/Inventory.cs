@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //ref: https://youtu.be/2WnAOV7nHW0
+[System.Serializable]
 public class Inventory
 {
     public event EventHandler OnItemListChanged;
-    List<Item> itemList;
+    public List<Item> itemList;
 
     Action<Item> useitemAction;
     public List<Item> GetItemList()
@@ -48,6 +49,7 @@ public class Inventory
             {
                 itemList.Remove(item);
             }
+ 
             //itemList.Add(item);
             OnItemListChanged?.Invoke(this, EventArgs.Empty);
         }
@@ -78,6 +80,7 @@ public class Inventory
         //itemList.Add(item);
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
+
 
     public void UseItem(Item item)
     {

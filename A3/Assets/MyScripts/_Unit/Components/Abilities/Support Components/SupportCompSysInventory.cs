@@ -42,7 +42,6 @@ public class SupportCompSysInventory : MonoBehaviour, ISupportComp
 
     public void IntactPickupItem(GameObject other)
     {
-
         ItemWorld itemWorld = null;
         bool hasItemWorld = other.TryGetComponent<ItemWorld>(out itemWorld);
         if (hasItemWorld)

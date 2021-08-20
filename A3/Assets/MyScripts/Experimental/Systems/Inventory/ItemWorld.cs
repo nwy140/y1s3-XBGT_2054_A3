@@ -30,6 +30,15 @@ public class ItemWorld : MonoBehaviour
         SetItem(item);
     }
 
+    //private void OnEnable()
+    //{
+    //    if (sysInventory != null)
+    //    {
+    //        transform.position = sysInventory.transform.position;
+    //        sysInventory = null;
+    //    }
+    //}
+
     public void DropItem()
     {
         Vector2 randomDir = UnityEngine.Random.Range(0, 1) * Vector2.one + UnityEngine.Random.Range(0, 1) * Vector2.right;
