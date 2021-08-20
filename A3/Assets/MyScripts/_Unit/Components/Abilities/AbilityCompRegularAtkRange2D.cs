@@ -15,10 +15,7 @@ public class AbilityCompRegularAtkRange2D : AbilityBaseComp
     public GameObject projectilePrefab;
     public GameObject muzzleFX;
     public List<Transform> muzzleSockets;
-    private void Update()
-    {
-        
-    }
+
     public override void OnAbilityActiveEnter()
     {
         base.OnAbilityActiveStay();

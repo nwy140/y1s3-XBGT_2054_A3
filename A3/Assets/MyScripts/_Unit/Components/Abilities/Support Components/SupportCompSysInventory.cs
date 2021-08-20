@@ -9,7 +9,7 @@ public class SupportCompSysInventory : MonoBehaviour, ISupportComp
 
     public Inventory inventory;
     [SerializeField]
-    UI_Inventory uiInventory;
+    public UI_Inventory uiInventory;
 
     private void Awake()
     {
@@ -26,19 +26,31 @@ public class SupportCompSysInventory : MonoBehaviour, ISupportComp
             GetComponentInChildren<ItemWorld>().DropItem();
         }
     }
-    void UseItem(Item item)
+    public void UseItem(Item item)
     {
         switch (item.itemType)
         {
             default:
-            case Item.ItemType.WP_Melee_Sword:
-            case Item.ItemType.MedKit:
             case Item.ItemType.Currency_Coin:
+                Debug.Log("Use " + "Sword");
+                _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType0).buttonDown = true;
+                break;
             case Item.ItemType.HP_Potion:
+                _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType1).buttonDown = true;
+                break;
             case Item.ItemType.MP_Potion:
+                _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType2).buttonDown = true;
+                break;
+            case Item.ItemType.AOE_Use:
+                _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType3).buttonDown = true;
+                break;
+            case Item.ItemType.WP_Melee_Sword:
+                _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType4).buttonDown = true;
+                break;
                 break;
         }
     }
+
 
     public void IntactPickupItem(GameObject other)
     {

@@ -1,7 +1,6 @@
-using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.AI;
 
 public class UnitRefs : MonoBehaviour
 {
@@ -70,7 +69,7 @@ public class UnitRefs : MonoBehaviour
     private void Awake()
     {
         // Ref: TryGetComponent https://medium.com/chenjd-xyz/unity-tip-use-trygetcomponent-instead-of-getcomponent-to-avoid-memory-allocation-in-the-editor-fe0c3121daf6
-        if(hasAnim == false)
+        if (hasAnim == false)
             hasAnim = TryGetComponent(out _anim);
         //TryGetComponent(out _characterController);
         TryGetComponent(out _unitCharacterController);
@@ -115,6 +114,4 @@ public class UnitRefs : MonoBehaviour
 
 
     #endregion Comp Refs
-
 }
-

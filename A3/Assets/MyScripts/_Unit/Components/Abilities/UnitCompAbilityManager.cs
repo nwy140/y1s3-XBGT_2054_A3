@@ -10,6 +10,21 @@ public class UnitCompAbilityManager : MonoBehaviour
     public UnitRefs _ownerUnitRefs;
 
     public EUnitPossesionType eUnitPossesion;
+
+    [Header("Ability Slots")]
+    public AbilityBaseComp BasicTaskAblSlot_A1; //
+    public AbilityBaseComp BasicTaskAblSlot_A2; // 
+
+    public AbilityBaseComp BasicTaskAblSlot_B1; // 
+    public AbilityBaseComp BasicTaskAblSlot_B2;
+    public AbilityBaseComp BasicTaskAblSlot_B3;
+    public AbilityBaseComp BasicTaskAblSlot_B4; // 
+
+    public AbilityBaseComp BasicTaskAblSlot_C1; // 
+    public AbilityBaseComp BasicTaskAblSlot_C2; // 
+
+    public AbilityBaseComp BasicTaskAblSlot_D1;
+    public AbilityBaseComp BasicTaskAblSlot_D2;
     void Awake()
     {
         unitAblComponents = new List<AbilityBaseComp>(GetComponentsInChildren<AbilityBaseComp>());

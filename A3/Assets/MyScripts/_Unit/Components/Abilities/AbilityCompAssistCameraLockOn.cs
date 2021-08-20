@@ -406,8 +406,8 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
                 rayRange = col.radius;
             }
             float halfFOV = totalFOV / 2.0f;
-            Quaternion leftRayRotation = Quaternion.AngleAxis(-halfFOV, Vector3.up);
-            Quaternion rightRayRotation = Quaternion.AngleAxis(halfFOV, Vector3.up);
+            Quaternion leftRayRotation = Quaternion.AngleAxis(-halfFOV, transform.up);
+            Quaternion rightRayRotation = Quaternion.AngleAxis(halfFOV, transform.up);
             Vector3 leftRayDirection = leftRayRotation * transform.forward;
             Vector3 rightRayDirection = rightRayRotation * transform.forward;
             Gizmos.DrawRay(transform.position, leftRayDirection * rayRange);

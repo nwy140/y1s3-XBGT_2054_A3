@@ -14,6 +14,8 @@ TagManager:
   - ProjectileAI
   - Bomb
   - Potion
+  - SwordP1
+  - SwordAI
   layers:
   - Default
   - TransparentFX

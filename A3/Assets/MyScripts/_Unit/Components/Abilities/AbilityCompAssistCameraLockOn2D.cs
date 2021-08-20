@@ -543,7 +543,7 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
         }
         if (allowedLayers != (allowedLayers | (1 << other.layer)))
         {
-            print(3 + other.layer.ToString());
+            //print(3 + other.layer.ToString());
             return false;
         }
         return true; // target accepted
@@ -575,7 +575,7 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            Debug.Log(ValidateTargetDetectedTagsLayers(collision.gameObject));
+            //Debug.Log(ValidateTargetDetectedTagsLayers(collision.gameObject));
         if (ValidateTargetDetectedTagsLayers(collision.gameObject) == false)
         {
 

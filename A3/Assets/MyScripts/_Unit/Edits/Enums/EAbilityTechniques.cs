@@ -73,6 +73,18 @@ public enum EAbilityTechniques
     RegularAtkAim,
     #endregion 2D
 
+    #region Quick abl
+    ItemType0,
+    ItemType1,
+    ItemType2,
+
+    ItemType3,
+
+    ItemType4,
+    ItemType5,
+
+    #endregion Quick abl
+
 }
 
 

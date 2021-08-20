@@ -10,6 +10,7 @@ public class ImpactEffect : MonoBehaviour
     public GameObject instigator;
 
     public float lifespan = 5f;
+    public bool isAllowDestroy = true;
 
     private void Awake()
     {
@@ -99,8 +100,12 @@ public class ImpactEffect : MonoBehaviour
         if (ValidateTargetDetectedTagsLayers(other.gameObject) == true)
         {
             Instantiate(hit_effect, transform.position, Quaternion.identity);
-            gameObject.SetActive(false);
-            Destroy(gameObject, 0.1f);
+
+            if (isAllowDestroy)
+            {
+                gameObject.SetActive(false);
+                Destroy(gameObject, 0.1f);
+            }
         }
     }
 

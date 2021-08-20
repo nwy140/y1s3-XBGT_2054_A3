@@ -22,6 +22,16 @@ public class UI_Inventory : MonoBehaviour
             //itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
         }
     }
+
+    public void UseItemByUIItemIndex(int index) // Wrapper
+    {
+        var uiItemSlots = GetComponentsInChildren<UI_ItemSlot>();
+
+        if (uiItemSlots.Length > 0 && uiItemSlots.Length>index)
+        {
+            uiItemSlots[index].UseItem();
+        }
+    }
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
