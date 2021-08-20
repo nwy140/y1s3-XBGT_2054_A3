@@ -352,8 +352,11 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
         // SInt Edits
         if (m_CandidateTargets.Count > 0)
         {
+            if (m_targetInFrontClosest ==null)
+            {
+                OnDetected_TargetInFrontClosest.Invoke();
+            }
             m_targetInFrontClosest = m_CandidateTargets.First();
-            OnDetected_TargetInFrontClosest.Invoke();
         }
         else
         {
