@@ -9,14 +9,19 @@ namespace experimental
         public override void UpdateState(UnitStates charState, Animator animator)
         {
             base.UpdateState(charState, animator);
-            var frontTarget = ((AbilityCompAssistCameraLockOn2D)_ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.LockOn)).m_targetInFrontClosest;
-            if (frontTarget != null)
+            var LockOnComp = ((AbilityCompAssistCameraLockOn2D)_ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.LockOn));
+            if (LockOnComp.m_CandidateTargets.Count > 0)
             {
-                var targetPos = frontTarget.transform.position;
-                if (Vector2.Distance(_ownerUnitRefs.transform.position, targetPos) > 5f)
-                    _ownerUnitRefs.NavMeshAgentTargetDestinationPoint.transform.position = targetPos;
-                else
-                    _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkRange2D).buttonDown = true;
+                var frontTarget =LockOnComp.m_CandidateTargets[0];
+                if (frontTarget != null)
+                {
+                    var targetPos = frontTarget.transform.position;
+                    if (Vector2.Distance(_ownerUnitRefs.transform.position, targetPos) > 20f)
+                        _ownerUnitRefs.NavMeshAgentTargetDestinationPoint.transform.position = targetPos;
+                    else
+                        _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkAim).buttonDown = true;
+
+                }
 
             }
         }

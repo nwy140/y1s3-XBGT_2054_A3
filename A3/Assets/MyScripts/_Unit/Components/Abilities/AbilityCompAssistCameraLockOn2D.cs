@@ -352,10 +352,7 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
         // SInt Edits
         if (m_CandidateTargets.Count > 0)
         {
-            if (m_targetInFrontClosest ==null)
-            {
-                OnDetected_TargetInFrontClosest.Invoke();
-            }
+
             m_targetInFrontClosest = m_CandidateTargets.First();
         }
         else
@@ -365,10 +362,12 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
         if (m_LockedOnTargetClosest != null)
         {
             SetCosmeticsVisibility(m_LockedOnTargetClosest.activeInHierarchy);
+
         }
         else
         {
             SetCosmeticsVisibility(false);
+
         }
 
     }
@@ -591,7 +590,9 @@ public class AbilityCompAssistCameraLockOn2D : AbilityBaseComp
 
         //++m_NumberOfTargetsWithinRange;
         m_ObjectsInCollider.Add(collision.gameObject);
-        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider); 
+        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider);
+        OnDetected_TargetInFrontClosest.Invoke();
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

@@ -11,6 +11,7 @@ public class UI_ItemSlot : MonoBehaviour
     public Transform ItemWorldParent;
     public UI_Inventory uiInventory;
 
+
     public void DropItem()
     {
         if (ItemWorldParent.childCount > 0)

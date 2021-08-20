@@ -178,12 +178,12 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
         {
             SetCurHP(curHP - onHitBoxDmgValue[onHitBoxDmgFilterTags.IndexOf(other.tag)]);
         }
-        if (other.tag == "Potion")
-        {
-            AudioManager.instance.PlaySFX("heal");
-            ScoreManager.instance.IncrementScore(200f);
-            Destroy(other);
-        }
+        //if (other.tag == "Potion")
+        //{
+        //    AudioManager.instance.PlaySFX("heal");
+        //    ScoreManager.instance.IncrementScore(200f);
+        //    Destroy(other);
+        //}
     }
 
     public bool isBlinking;

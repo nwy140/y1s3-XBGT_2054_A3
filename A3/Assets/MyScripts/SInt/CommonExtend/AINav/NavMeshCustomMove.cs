@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class NavMeshCustomMove : MonoBehaviour
 {
     public Transform target;
-
+    public Transform[] targetList;
     public NavMeshAgent agent;
     public UnitRefs _ownerUnitRefs;
 
@@ -25,8 +25,10 @@ public class NavMeshCustomMove : MonoBehaviour
     {
         path = new NavMeshPath();
         elapsed = 0.0f;
+        curIndex = Random.Range(0, targetList.Length - 1);
     }
 
+    public float turnRate = 1f; 
     bool HasPathAndDrawPath()
     {
         // Update the way to the goal every second.
@@ -42,14 +44,26 @@ public class NavMeshCustomMove : MonoBehaviour
         return result;
     }
 
+    int curIndex;
     void Update()
     {
         if (_ownerUnitRefs.unitCompAbilityManager.eUnitPossesion == EUnitPossesionType.ai)
         {
 
             agent.SetDestination(target.position);
-            Vector2Common.LookAt2D(transform, target, 0.3f);
+            Vector2Common.LookAt2D(transform, target, turnRate);
             //CustomMove(agent.steeringTarget);
+        }
+        if (agent.desiredVelocity.magnitude < 0.2f)
+        {
+            curIndex++;
+
+            if (curIndex > targetList.Length-1)
+            {
+                curIndex = 0;
+            }
+
+            target.transform.position = targetList[curIndex].position;
         }
 
     }

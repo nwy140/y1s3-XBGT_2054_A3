@@ -12,6 +12,7 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
 
         //desc = "Perform Regular Ground Attack Combo to inflict damage on Opponents";
         //devComment = "Get Melee Handler Component and call Atk Method";
+        cursor.transform.position = transform.position + transform.up * 5;
     }
 
     public GameObject cursor;
@@ -23,6 +24,7 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
 
     public Vector2 targetPos;
     public bool isResetRotAfterAim = false;
+
 
     public override void AbilityFunctionality()
     {
@@ -46,6 +48,7 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
             targetPos = GameObject.FindGameObjectWithTag("Player").transform.position;
             // Or 
             // Set Target pos as detected obj pos in SightPerception
+            cursor.transform.position = transform.position + transform.up * 5;
         }
 
         int index = 0;
@@ -55,7 +58,7 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
             ImpactEffect impactEffect;
             var rot = Quaternion.Euler((Vector2Common.GetRotBetween2Pos(targetPos, muzzle.position) + aimRotOffset) * Vector3.forward);
             muzzle.rotation = rot;
-            if (index!=0)
+            if (index!=0 && button)
             {
                 Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
                 Instantiate(muzzleFX, muzzle.position, muzzle.rotation);
@@ -81,14 +84,14 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
     {
         if (cursor)
         {
-            cursor.SetActive(button);
-            if (button == false && isResetRotAfterAim)
-            {
-                foreach (Transform muzzle in muzzleSockets)
-                {
-                    muzzle.localRotation = Quaternion.identity;
-                }
-            }
+            //cursor.SetActive(button);
+            //if (button == false && isResetRotAfterAim)
+            //{
+            //    foreach (Transform muzzle in muzzleSockets)
+            //    {
+            //        muzzle.localRotation = Quaternion.identity;
+            //    }
+            //}
         }
     }
 

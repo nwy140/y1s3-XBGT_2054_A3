@@ -78,8 +78,8 @@ public class UnitCompMotionCharacterController2D : MonoBehaviour
         if(moveTopDownDir != Vector2.zero)
         {
             // Rotation Ref: https://youtu.be/gs7y2b0xthU
-            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, moveTopDownDir);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotationSmoothTime * Time.deltaTime);
+            //Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, moveTopDownDir);
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotationSmoothTime * Time.deltaTime);
         }
 
         if (abilityCurrMoveDirVehicleStyle == Vector2.zero)
