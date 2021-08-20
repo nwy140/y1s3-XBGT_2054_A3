@@ -12,11 +12,11 @@ public class UI_Inventory : MonoBehaviour
     public Transform itemSlotTemplate;
     private void Awake()
     {
-        if(itemSlotContainer == null)
+        if (itemSlotContainer == null)
         {
 
         }
-        if(itemSlotTemplate == null)
+        if (itemSlotTemplate == null)
         {
             //itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
         }
@@ -34,6 +34,7 @@ public class UI_Inventory : MonoBehaviour
         RefreshInventoryItems();
     }
 
+
     void RefreshInventoryItems()
     {
         foreach (Transform child in itemSlotContainer)
@@ -46,7 +47,7 @@ public class UI_Inventory : MonoBehaviour
         float itemSlotCellSize = 30f;
         foreach (Item item in inventory.GetItemList())
         {
-            RectTransform itemSlotRectTransform =Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
+            RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
             //itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRectTransform.GetChild(1).GetComponent<Image>();
@@ -54,7 +55,14 @@ public class UI_Inventory : MonoBehaviour
 
             var amountTextComp = itemSlotRectTransform.GetComponentInChildren<TextMeshProUGUI>();
             amountTextComp.transform.parent.gameObject.SetActive(item.IsStackable());
-            amountTextComp.text = item.amount.ToString();
+            if (item.amount <= 1)
+            {
+                amountTextComp.text = "";
+            }
+            else
+            {
+                amountTextComp.text = item.amount.ToString();
+            }
 
 
             x++;

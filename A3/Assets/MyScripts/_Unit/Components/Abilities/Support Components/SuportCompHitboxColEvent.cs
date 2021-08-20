@@ -41,14 +41,20 @@ public class SuportCompHitboxColEvent : MonoBehaviour
     {
         if (ValidateHitboxDetectedTagsLayers(other.gameObject))
         {
-            ItemWorld itemWorld = null;
-            bool hasItemWorld = other.TryGetComponent<ItemWorld>(out itemWorld);
-            if (hasItemWorld)
-            {
-                sysInventory.inventory.AddItem(itemWorld.GetItem());
-                //itemWorld.DestroySelf
-                Destroy(other.gameObject);
-            }
+            //if (sysInventory)
+            //{
+            //    ItemWorld itemWorld = null;
+            //    bool hasItemWorld = other.TryGetComponent<ItemWorld>(out itemWorld);
+            //    if (hasItemWorld)
+            //    {
+            //        sysInventory.inventory.AddItem(itemWorld.GetItem());
+            //        itemWorld.sysInventory = sysInventory;
+            //        //itemWorld.DestroySelf
+            //        //Destroy(other.gameObject);
+            //        other.transform.SetParent(sysInventory.transform);
+            //        other.gameObject.SetActive(false);
+            //    }
+            //}
         }
     }
 
