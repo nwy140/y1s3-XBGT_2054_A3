@@ -13,9 +13,9 @@ public class SupportCompSysInventory : MonoBehaviour, ISupportComp
 
     private void Awake()
     {
-        //inventory = new Inventory();
-        //uiInventory.SetInventory(inventory);
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
 
-        ItemWorld.SpawnItemWorld(new Vector2(-8,5), new Item { itemType = Item.ItemType.HP_Potion, amount = 1 });
+        //ItemWorld.SpawnItemWorld(new Vector2(-8,5), new Item { itemType = Item.ItemType.HP_Potion, amount = 1 });
     }
 }

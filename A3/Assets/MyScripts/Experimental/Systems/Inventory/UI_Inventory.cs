@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 //ref: https://youtu.be/2WnAOV7nHW0
 public class UI_Inventory : MonoBehaviour
 {
-    Inventory inventory;
-    Transform itemSlotContainer;
-    Transform itemSlotTemplate;
+    public Inventory inventory;
+    public Transform itemSlotContainer;
+    public Transform itemSlotTemplate;
     private void Awake()
     {
         if(itemSlotContainer == null)
@@ -22,11 +24,23 @@ public class UI_Inventory : MonoBehaviour
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
+
+        inventory.OnItemListChanged += Inventory_OnItemListChanged;
+        RefreshInventoryItems();
+    }
+
+    private void Inventory_OnItemListChanged(object sender, EventArgs e)
+    {
         RefreshInventoryItems();
     }
 
     void RefreshInventoryItems()
     {
+        foreach (Transform child in itemSlotContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 30f;
@@ -34,9 +48,15 @@ public class UI_Inventory : MonoBehaviour
         {
             RectTransform itemSlotRectTransform =Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
-            itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
-            Image image = itemSlotRectTransform.GetChild(0).GetComponent<Image>();
+            //itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+            Image image = itemSlotRectTransform.GetChild(1).GetComponent<Image>();
             image.sprite = item.GetSprite();
+
+            var amountTextComp = itemSlotRectTransform.GetComponentInChildren<TextMeshProUGUI>();
+            amountTextComp.transform.parent.gameObject.SetActive(item.IsStackable());
+            amountTextComp.text = item.amount.ToString();
+
+
             x++;
             if (x > 4)
             {

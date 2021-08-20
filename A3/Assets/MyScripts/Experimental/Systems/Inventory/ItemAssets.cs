@@ -13,5 +13,7 @@ public class ItemAssets : Singleton<ItemAssets>
     public Sprite ItemSprite_HP_Potion;
     public Sprite ItemSprite_MP_Potion;
     public Sprite ItemSprite_Currency_Coin;
+    public Sprite ItemSprite_Medkit;
+
 
 }
