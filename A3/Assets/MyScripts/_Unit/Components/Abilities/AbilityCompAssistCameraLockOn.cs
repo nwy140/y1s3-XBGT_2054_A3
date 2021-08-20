@@ -63,10 +63,6 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
         LockOnTargetIndicatorParentConstraint.constraintActive = true;
         TargetInFrontIndicatorParentConstraint.constraintActive = true;
     }
-    private void Start()
-    {
-    }
-
     public override void OnInit()
     {
         if (eUnitPossesion == EUnitPossesionType.ai)
@@ -398,44 +394,24 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
     public List<String> ignoreTags;
     public List<GameObject> ignoreObjs;
 
-    //void OnDrawGizmosSelected()
-    private void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
         if (isDebugLog)
         {
             SphereCollider col;
-            CircleCollider2D col2D;
             float totalFOV = m_Angle;
             float rayRange = 0;
-
             if (TryGetComponent<SphereCollider>(out col))
             {
                 rayRange = col.radius;
-
-            }
-            else if (TryGetComponent<CircleCollider2D>(out col2D))
-            {
-                rayRange = col2D.radius;
             }
             float halfFOV = totalFOV / 2.0f;
-            //Quaternion leftRayRotation = Quaternion.AngleAxis(-halfFOV,  Vector3.up);
-            //Quaternion rightRayRotation = Quaternion.AngleAxis(halfFOV,  Vector3.up);
-            //Vector3 leftRayDirection = leftRayRotation * transform.forward;
-            //Vector3 rightRayDirection = rightRayRotation * transform.forward;
-            //Gizmos.DrawRay(transform.position, leftRayDirection * rayRange);
-            //Gizmos.DrawRay(transform.position, rightRayDirection * rayRange);
-
-            var coneDirection = totalFOV;
-            //Ref: https://stackoverflow.com/questions/52130986/can-we-create-a-gizmos-like-cone-in-unity-with-script   Quaternion upRayRotation = Quaternion.AngleAxis(-halfFOV + coneDirection, Vector3.forward);
-            Quaternion upRayRotation = Quaternion.AngleAxis(-halfFOV + coneDirection, Vector3.forward);
-            Quaternion downRayRotation = Quaternion.AngleAxis(halfFOV + coneDirection, Vector3.forward);
-
-            Vector3 upRayDirection = upRayRotation * transform.right * rayRange;
-            Vector3 downRayDirection = downRayRotation * transform.right * rayRange;
-
-            Gizmos.DrawRay(transform.position, upRayDirection);
-            Gizmos.DrawRay(transform.position, downRayDirection);
-            Gizmos.DrawLine(transform.position + downRayDirection, transform.position + upRayDirection);
+            Quaternion leftRayRotation = Quaternion.AngleAxis(-halfFOV, Vector3.up);
+            Quaternion rightRayRotation = Quaternion.AngleAxis(halfFOV, Vector3.up);
+            Vector3 leftRayDirection = leftRayRotation * transform.forward;
+            Vector3 rightRayDirection = rightRayRotation * transform.forward;
+            Gizmos.DrawRay(transform.position, leftRayDirection * rayRange);
+            Gizmos.DrawRay(transform.position, rightRayDirection * rayRange);
         }
     }
     public void SetCosmeticsVisibility(bool isCurrentlyLockedOn)
@@ -533,17 +509,14 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
         }
         if (ignoreTags.Contains(other.tag) /*|| ignoreLayers == (ignoreLayers | (1 << other.layer))*/)
         {
-            print(1);
             return false;
         }
         if (ignoreObjs.Contains(other))
         {
-            print(2);
             return false;
         }
         if (allowedLayers != (allowedLayers | (1 << other.layer)))
         {
-            print(3 + other.layer.ToString());
             return false;
         }
         return true; // target accepted
@@ -558,7 +531,7 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
 
         //++m_NumberOfTargetsWithinRange;
         m_ObjectsInCollider.Add(other.gameObject);
-        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider); 
+        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider); ;
     }
     private void OnTriggerStay(Collider other)
     {
@@ -573,28 +546,7 @@ public class AbilityCompAssistCameraLockOn : AbilityBaseComp
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-            Debug.Log(ValidateTargetDetectedTagsLayers(collision.gameObject));
-        if (ValidateTargetDetectedTagsLayers(collision.gameObject) == false)
-        {
 
-            return;
-        }
-
-        //++m_NumberOfTargetsWithinRange;
-        m_ObjectsInCollider.Add(collision.gameObject);
-        m_CandidateTargets = new List<GameObject>(m_ObjectsInCollider); 
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        m_ObjectsInCollider.Remove(collision.gameObject);
-        if (m_CandidateTargets.Contains(collision.gameObject))
-        {
-            m_CandidateTargets.Remove(collision.gameObject);
-            //--m_NumberOfTargetsWithinRange;
-        }
-    }
     #region Private
 
     private void Target(GameObject possibleLockedOnTarget)
