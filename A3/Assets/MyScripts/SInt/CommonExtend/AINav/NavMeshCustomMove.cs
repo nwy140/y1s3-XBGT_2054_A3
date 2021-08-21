@@ -51,10 +51,10 @@ public class NavMeshCustomMove : MonoBehaviour
         {
 
             agent.SetDestination(target.position);
-            Vector2Common.LookAt2D(transform, target, turnRate);
+            Vector2Common.LookAt2D(transform, target.position, turnRate);
             //CustomMove(agent.steeringTarget);
         }
-        if (agent.desiredVelocity.magnitude < 0.2f)
+        if (agent.desiredVelocity.magnitude < 5f)
         {
             curIndex++;
 

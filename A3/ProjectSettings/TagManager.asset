@@ -16,6 +16,8 @@ TagManager:
   - Potion
   - SwordP1
   - SwordAI
+  - FxTemporaire
+  - DamageFX
   layers:
   - Default
   - TransparentFX

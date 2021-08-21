@@ -32,7 +32,7 @@ public class SupportCompSysInventory : MonoBehaviour, ISupportComp
         {
             default:
             case Item.ItemType.Currency_Coin:
-                Debug.Log("Use " + "Sword");
+                //Debug.Log(Open);
                 _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType0).buttonDown = true;
                 break;
             case Item.ItemType.HP_Potion:

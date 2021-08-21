@@ -45,10 +45,21 @@ public class AbilityCompRegularAtkAim : AbilityBaseComp
         }
         else if (eUnitPossesion == EUnitPossesionType.ai)
         {
-            targetPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+            var LockOnComp = (AbilityCompAssistCameraLockOn2D)_ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.LockOn);
+            if (((AbilityCompAssistCameraLockOn2D)_ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.LockOn)).m_CandidateTargets.Count > 0)
+            {
+                targetPos= LockOnComp.m_CandidateTargets[0].transform.position;
+                aimRotOffset = -90;
+                button = true;
+            }
+            else
+            {
+                cursor.transform.position = transform.position + transform.up * 5;
+                aimRotOffset = 90;
+                button = false;
+            }
             // Or 
             // Set Target pos as detected obj pos in SightPerception
-            cursor.transform.position = transform.position + transform.up * 5;
         }
 
         int index = 0;

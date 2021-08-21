@@ -9,9 +9,9 @@ public static class Vector2Common
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         return angle;
     }
-    public static void LookAt2D(Transform origin, Transform target, float turnRate)
+    public static void LookAt2D(Transform origin, Vector3 targetPos, float turnRate)
     {
-        Vector3 diff = target.position - origin.position;
+        Vector3 diff = targetPos - origin.position;
         diff.Normalize();
 
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;

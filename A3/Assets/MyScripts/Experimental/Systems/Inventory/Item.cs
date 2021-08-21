@@ -8,9 +8,9 @@ public class Item
     {
         Currency_Coin,
         HP_Potion,
-        MP_Potion,
         WP_Melee_Sword,
         AOE_Use,
+        MP_Potion,
     }
     public ItemType itemType;
     public int amount;

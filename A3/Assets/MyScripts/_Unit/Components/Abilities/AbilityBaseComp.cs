@@ -88,6 +88,11 @@ public class AbilityBaseComp : MonoBehaviour
 
     #endregion Ability Attributes
     #region Monobehavior Methods
+
+    public void SetButtonDown(bool newButtonDown)
+    {
+        buttonDown = newButtonDown;
+    }
     protected virtual void Awake()
     {
 

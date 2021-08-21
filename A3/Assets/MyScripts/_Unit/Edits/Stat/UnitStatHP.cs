@@ -40,6 +40,7 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
 
 
 
+
     void OnGUI()
     {
         if (HPSlider != null)
@@ -122,10 +123,21 @@ public class UnitStatHP : MonoBehaviour, ISupportComp
             _ownerUnitRefs._unitCharacterController.abilityCurrMoveDirVehicleStyle = Vector2.zero;
         }
     }
+    SupportCompSysInventory sysInventory;
 
     public void OnKO()
     {
         OnKOEvent.Invoke();
+        if (sysInventory.uiInventory.itemSlotContainer.childCount > 0)
+        {
+            var itemSlots = sysInventory.uiInventory.itemSlotContainer.GetComponentsInChildren<UI_ItemSlot>();
+            foreach (var i in itemSlots)
+            {
+                i.DropItem();
+            }
+        }
+
+        
         Destroy(_ownerUnitRefs.gameObject);
     }
 
