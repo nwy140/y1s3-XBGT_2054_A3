@@ -54,7 +54,7 @@ public class NavMeshCustomMove : MonoBehaviour
             Vector2Common.LookAt2D(transform, target.position, turnRate);
             //CustomMove(agent.steeringTarget);
         }
-        if (agent.desiredVelocity.magnitude < 2f)
+        if (agent.desiredVelocity.magnitude < 5f)
         {
             curIndex = Random.Range(0, targetList.Length - 1);
             if (curIndex > targetList.Length-1)
