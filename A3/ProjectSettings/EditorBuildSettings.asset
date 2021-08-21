@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MyScenes/_gm_01_SearchNDestroy.unity
+    path: Assets/MyScenes/_mm_00_SearchNDestroy.unity
     guid: c9ca1139e3c24544bb936736ebfcae2b
+  - enabled: 1
+    path: Assets/MyScenes/_gm_01_SearchNDestroy.unity
+    guid: 1d7beb36a12949b4e8f925fb7d60dad0
   m_configObjects: {}
