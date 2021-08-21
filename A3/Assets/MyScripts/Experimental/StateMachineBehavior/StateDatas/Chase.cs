@@ -19,7 +19,10 @@ namespace experimental
                     if (Vector2.Distance(_ownerUnitRefs.transform.position, targetPos) > 20f)
                         _ownerUnitRefs.NavMeshAgentTargetDestinationPoint.transform.position = targetPos;
                     else
+                    { 
                         _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.RegularAtkAim).buttonDown = true;
+                        _ownerUnitRefs.GetComponent<NavMeshCustomMove>().curIndex = _ownerUnitRefs.GetComponent<NavMeshCustomMove>().targetList.Length - 1;
+                    }
 
                 }
 

@@ -44,7 +44,7 @@ public class NavMeshCustomMove : MonoBehaviour
         return result;
     }
 
-    int curIndex;
+    public int curIndex;
     void Update()
     {
         if (_ownerUnitRefs.unitCompAbilityManager.eUnitPossesion == EUnitPossesionType.ai)
@@ -54,10 +54,9 @@ public class NavMeshCustomMove : MonoBehaviour
             Vector2Common.LookAt2D(transform, target.position, turnRate);
             //CustomMove(agent.steeringTarget);
         }
-        if (agent.desiredVelocity.magnitude < 5f)
+        if (agent.desiredVelocity.magnitude < 2f)
         {
-            curIndex++;
-
+            curIndex = Random.Range(0, targetList.Length - 1);
             if (curIndex > targetList.Length-1)
             {
                 curIndex = 0;

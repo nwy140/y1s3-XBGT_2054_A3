@@ -187,18 +187,18 @@ MonoBehaviour:
     initialVolume: 0
     source: {fileID: 0}
   - name: Projectile
-    clip: {fileID: 8300000, guid: c5927d5ba9f897d449008494bc87b0ad, type: 3}
+    clip: {fileID: 8300000, guid: 7da422104ebe8a44ea997e74647c682f, type: 3}
     loop: 0
-    isAllowMultiAudioSrcInstance: 1
+    isAllowMultiAudioSrcInstance: 0
     volume: 1
     pitch: 1
     initialVolume: 0
     source: {fileID: 0}
   - name: ProjectileAI
-    clip: {fileID: 8300000, guid: 5ffb93a07a15d2e4c827ea9de614782a, type: 3}
+    clip: {fileID: 8300000, guid: e65b1f99299e417449c91705fa2df893, type: 3}
     loop: 0
-    isAllowMultiAudioSrcInstance: 1
-    volume: 1
+    isAllowMultiAudioSrcInstance: 0
+    volume: 0.081
     pitch: 1
     initialVolume: 0
     source: {fileID: 0}
@@ -220,6 +220,22 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: heal
     clip: {fileID: 8300000, guid: 03b3ad97af1bb9a4fb3f835ee0087dac, type: 3}
+    loop: 0
+    isAllowMultiAudioSrcInstance: 1
+    volume: 1
+    pitch: 1
+    initialVolume: 0
+    source: {fileID: 0}
+  - name: use
+    clip: {fileID: 8300000, guid: 35b3f7627d3980144981cea40c8b4f03, type: 3}
+    loop: 0
+    isAllowMultiAudioSrcInstance: 1
+    volume: 1
+    pitch: 1
+    initialVolume: 0
+    source: {fileID: 0}
+  - name: take
+    clip: {fileID: 8300000, guid: 11de04dfd8d5432419989667cbe59027, type: 3}
     loop: 0
     isAllowMultiAudioSrcInstance: 1
     volume: 1
@@ -252,7 +268,7 @@ MonoBehaviour:
     initialVolume: 0
     source: {fileID: 0}
   - name: Scene_MainMenu
-    clip: {fileID: 8300000, guid: 51225ddbab3e45242a390c7a8cf3e0ee, type: 3}
+    clip: {fileID: 8300000, guid: 554af08f11b024f4aa25f83768d6d054, type: 3}
     loop: 1
     isAllowMultiAudioSrcInstance: 0
     volume: 1
@@ -284,7 +300,7 @@ MonoBehaviour:
     initialVolume: 0
     source: {fileID: 0}
   - name: region_overworld_AncientStage01
-    clip: {fileID: 8300000, guid: c2f3be333fb512641946a0e708159410, type: 3}
+    clip: {fileID: 8300000, guid: b07dba3c319330745b3b13fdb0651298, type: 3}
     loop: 1
     isAllowMultiAudioSrcInstance: 0
     volume: 1

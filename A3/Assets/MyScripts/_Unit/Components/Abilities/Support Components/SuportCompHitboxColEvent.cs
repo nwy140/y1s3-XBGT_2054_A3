@@ -55,6 +55,8 @@ public class SuportCompHitboxColEvent : MonoBehaviour
                     //Destroy(other.gameObject);
                     //other.transform.SetParent(sysInventory.transform);'
                     itemWorld.gameObject.SetActive(false);
+                    AudioManager.instance.PlaySFX("take");
+
                 }
             }
         }

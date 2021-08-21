@@ -45,28 +45,35 @@ public class SupportCompSysInventory : MonoBehaviour, ISupportComp
                 break;
             case Item.ItemType.AOE_Use:
                 _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType3).buttonDown = true;
+                if (_ownerUnitRefs.unitCompAbilityManager.eUnitPossesion == EUnitPossesionType.player)
+                {
+                    inventory.RemoveItem(item);
+                }
                 break;
             case Item.ItemType.WP_Melee_Sword:
                 _ownerUnitRefs.unitCompAbilityManager.GetActiveAbilityCompByEnum(EAbilityTechniques.ItemType4).buttonDown = true;
-                break;
+                if(_ownerUnitRefs.unitCompAbilityManager.eUnitPossesion == EUnitPossesionType.player)
+                {
+                    inventory.RemoveItem(item);
+                }
                 break;
         }
     }
 
 
-    public void IntactPickupItem(GameObject other)
-    {
-        ItemWorld itemWorld = null;
-        bool hasItemWorld = other.TryGetComponent<ItemWorld>(out itemWorld);
-        if (hasItemWorld)
-        {
-            inventory.AddItem(itemWorld.GetItem());
-            itemWorld.sysInventory = this;
-            //itemWorld.DestroySelf
-            //Destroy(other.gameObject);
-            other.transform.SetParent(transform);
-            other.gameObject.SetActive(false);
-        }
-    }
+    //public void IntactPickupItem(GameObject other)
+    //{
+    //    ItemWorld itemWorld = null;
+    //    bool hasItemWorld = other.TryGetComponent<ItemWorld>(out itemWorld);
+    //    if (hasItemWorld)
+    //    {
+    //        inventory.AddItem(itemWorld.GetItem());
+    //        itemWorld.sysInventory = this;
+    //        //itemWorld.DestroySelf
+    //        //Destroy(other.gameObject);
+    //        other.transform.SetParent(transform);
+    //        other.gameObject.SetActive(false);
+    //    }
+    //}
 
 }

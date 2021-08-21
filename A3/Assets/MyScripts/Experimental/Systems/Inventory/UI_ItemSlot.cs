@@ -33,6 +33,7 @@ public class UI_ItemSlot : MonoBehaviour
         {
             var itemWorld = ItemWorldParent.GetChild(0).GetComponent<ItemWorld>();
             itemWorld.sysInventory.UseItem(itemWorld.item);
+            AudioManager.instance.PlaySFX("use");
         }
     }
 }

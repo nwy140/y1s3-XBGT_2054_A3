@@ -11,7 +11,7 @@ public class ItemWorldSpawner : MonoBehaviour
     public void SpawnRandomItem()
     {
 
-        item = new Item { itemType = (Item.ItemType)UnityEngine.Random.Range(0,3), amount = 0 };
+        item = new Item { itemType = (Item.ItemType)UnityEngine.Random.Range(1,3), amount = 1 };
         ItemWorld.SpawnItemWorld(transform.position, item);
     }
 }

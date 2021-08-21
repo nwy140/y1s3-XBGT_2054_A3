@@ -71,6 +71,7 @@ public class Inventory
             if(itemAlreadyinInventory == false)
             {
                 itemList.Add(item);
+
             }
         }
         else

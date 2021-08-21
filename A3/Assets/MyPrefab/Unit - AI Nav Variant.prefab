@@ -2280,6 +2280,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!95 &8841340808759129443
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090480022552436819}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c9c1d7e008a25e4eb7a08f6216df9c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4360572691047744491
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,6 +4478,16 @@ PrefabInstance:
       propertyPath: eventToCall.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6679128630516801740, guid: 501704aa7292e8c449606ba76f71b992,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679128630516801740, guid: 501704aa7292e8c449606ba76f71b992,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.82
+      objectReference: {fileID: 0}
     - target: {fileID: 8790944188158562759, guid: 501704aa7292e8c449606ba76f71b992,
         type: 3}
       propertyPath: m_FlipY
@@ -4477,9 +4506,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501704aa7292e8c449606ba76f71b992, type: 3}
---- !u!4 &1517982729171173958 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2982863958009538868, guid: 501704aa7292e8c449606ba76f71b992,
+--- !u!1 &6090480022552436819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7561557550107036449, guid: 501704aa7292e8c449606ba76f71b992,
+    type: 3}
+  m_PrefabInstance: {fileID: 4356590286941743986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1517982728920168890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2982863958729462472, guid: 501704aa7292e8c449606ba76f71b992,
     type: 3}
   m_PrefabInstance: {fileID: 4356590286941743986}
   m_PrefabAsset: {fileID: 0}
@@ -4513,9 +4548,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4356590286941743986}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1517982728920168890 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2982863958729462472, guid: 501704aa7292e8c449606ba76f71b992,
+--- !u!4 &1517982729171173958 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2982863958009538868, guid: 501704aa7292e8c449606ba76f71b992,
     type: 3}
   m_PrefabInstance: {fileID: 4356590286941743986}
   m_PrefabAsset: {fileID: 0}
@@ -4674,12 +4709,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a622d7dde62247d40b5464638dfb89f6, type: 3}
---- !u!224 &2146911285181399637 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6676454086283256037, guid: a622d7dde62247d40b5464638dfb89f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 4714384726702269104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5250409077467448131 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 698595408719553011, guid: a622d7dde62247d40b5464638dfb89f6,
@@ -4692,6 +4721,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &2146911285181399637 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6676454086283256037, guid: a622d7dde62247d40b5464638dfb89f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4714384726702269104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1984174053754512883 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6549896475856865091, guid: a622d7dde62247d40b5464638dfb89f6,
